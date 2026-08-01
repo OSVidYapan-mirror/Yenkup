@@ -1,0 +1,309 @@
+[gd_scene load_steps=29 format=3 uid="uid://b4xg250v6otee"]
+
+[ext_resource type="PackedScene" uid="uid://bn6bqmhm3c7g5" path="res://scene/United.tscn" id="1_82x7h"]
+[ext_resource type="Script" uid="uid://dmrlu4cdms86s" path="res://src/mainscene2d/main2d.gd" id="1_in46o"]
+[ext_resource type="Script" uid="uid://tkp1qupkewsd" path="res://src/mainscene2d/yenküp2d.gd" id="2_efubw"]
+[ext_resource type="Texture2D" uid="uid://d8lvemfyvjtu" path="res://assets/Skin/C4.png" id="2_ic0lq"]
+[ext_resource type="Texture2D" uid="uid://po0wepovvy7k" path="res://assets/Skin/Tugla.png" id="3_e13tw"]
+[ext_resource type="Texture2D" uid="uid://buf2dl8lm5g1e" path="res://assets/2D/Agac.png" id="3_tp5lk"]
+[ext_resource type="Texture2D" uid="uid://b6ue3mllrsgfc" path="res://assets/Yenküp.png" id="4_hkl6e"]
+[ext_resource type="Texture2D" uid="uid://dwjaypsj5r8od" path="res://assets/2D/GizliYerküp.png" id="7_e13tw"]
+[ext_resource type="Script" uid="uid://dxasxooeatshk" path="res://src/mainscene2d/pide2d.gd" id="9_tp5lk"]
+[ext_resource type="Texture2D" uid="uid://do3j6r5xmgil6" path="res://assets/Yemek/Pide.png" id="10_r33x4"]
+[ext_resource type="Texture2D" uid="uid://dbp2cit8ypkwo" path="res://assets/Yemek/Simit.png" id="13_3y7on"]
+[ext_resource type="Script" uid="uid://cchbukqqgjcq0" path="res://src/mainscene2d/gizliyerküp2d.gd" id="14_efubw"]
+[ext_resource type="Texture2D" uid="uid://11i6jbvv8b5j" path="res://assets/Yemek/Pogaca.png" id="14_tnm7o"]
+[ext_resource type="Texture2D" uid="uid://bsccgqta7ka8x" path="res://assets/Çiçek/Cicek1.png" id="15_efubw"]
+[ext_resource type="Texture2D" uid="uid://bqlngg5ofpe2m" path="res://assets/Çiçek/Cicek2.png" id="16_in46o"]
+[ext_resource type="Texture2D" uid="uid://cpjinxemuywel" path="res://assets/Çiçek/Cicek3.png" id="17_tp5lk"]
+[ext_resource type="Texture2D" uid="uid://btp77yohjqnhm" path="res://assets/Çiçek/Cicek4.png" id="18_e13tw"]
+[ext_resource type="Texture2D" uid="uid://b0hp2bpeu8cfc" path="res://assets/Diken.png" id="19_76ecl"]
+[ext_resource type="Texture2D" uid="uid://co1gpnbicp47n" path="res://assets/Çiçek/Cicek5.png" id="19_mlftw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_76ecl"]
+size = Vector2(96.5, 80.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4cmfj"]
+size = Vector2(42.2222, 43.1111)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5r1jc"]
+size = Vector2(65.3333, 65.3333)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qlg4q"]
+size = Vector2(100, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5h24j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tnm7o"]
+radius = 22.0227
+
+[sub_resource type="Curve2D" id="Curve2D_76ecl"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 189, 140, 0, 0, 0, 0, 185, 3175, 0, 0, 0, 0, 5098, 3173, 0, 0, 0, 0, 5099, 131, 0, 0, 0, 0, 189, 140)
+}
+point_count = 5
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oftdb"]
+radius = 43.1856
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6us46"]
+radius = 40.05
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_in46o")
+
+[node name="Yüzey" parent="." instance=ExtResource("1_82x7h")]
+
+[node name="TuglaDuvar" type="StaticBody2D" parent="."]
+z_index = 1
+
+[node name="Sınır" type="CollisionPolygon2D" parent="TuglaDuvar"]
+self_modulate = Color(1, 0, 0, 1)
+position = Vector2(2607, 1563)
+build_mode = 1
+polygon = PackedVector2Array(2512, 1583, 2512, -1417, -2488, -1417, -2488, 1583)
+
+[node name="Polygon2D" type="Polygon2D" parent="TuglaDuvar/Sınır"]
+position = Vector2(-24, -53)
+texture = ExtResource("3_e13tw")
+invert_enabled = true
+polygon = PackedVector2Array(-2469, -1371, 2536, -1364, 2536, 1636, -2464, 1638)
+
+[node name="Ağaç" type="CollisionShape2D" parent="TuglaDuvar"]
+position = Vector2(2500, 1000)
+shape = SubResource("RectangleShape2D_76ecl")
+
+[node name="Agac" type="Sprite2D" parent="TuglaDuvar/Ağaç"]
+z_index = 1
+scale = Vector2(0.552, 0.587)
+texture = ExtResource("3_tp5lk")
+
+[node name="Ağaç2" type="CollisionShape2D" parent="TuglaDuvar"]
+position = Vector2(2500, 1000)
+shape = SubResource("RectangleShape2D_76ecl")
+
+[node name="Agac2" type="Sprite2D" parent="TuglaDuvar/Ağaç2"]
+z_index = 1
+scale = Vector2(0.552, 0.576)
+texture = ExtResource("3_tp5lk")
+
+[node name="Ağaç3" type="CollisionShape2D" parent="TuglaDuvar"]
+position = Vector2(2500, 1000)
+shape = SubResource("RectangleShape2D_76ecl")
+
+[node name="Agac3" type="Sprite2D" parent="TuglaDuvar/Ağaç3"]
+z_index = 1
+scale = Vector2(0.552, 0.594)
+texture = ExtResource("3_tp5lk")
+
+[node name="Yenküp" type="CharacterBody2D" parent="."]
+position = Vector2(2500, 1500)
+scale = Vector2(1.5, 1.5)
+script = ExtResource("2_efubw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Yenküp"]
+z_index = 1
+position = Vector2(0.333252, 0.333374)
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_4cmfj")
+debug_color = Color(0.98229, 0, 0.363517, 0.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="Yenküp"]
+z_index = 1
+texture = ExtResource("4_hkl6e")
+
+[node name="Camera2D" type="Camera2D" parent="Yenküp"]
+
+[node name="Area2d" type="Area2D" parent="Yenküp"]
+z_index = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Yenküp/Area2d"]
+shape = SubResource("RectangleShape2D_5r1jc")
+debug_color = Color(5.67943e-06, 0.619217, 0.800376, 0.42)
+
+[node name="GizliYerküp" type="CharacterBody2D" parent="." groups=["düşman"]]
+z_index = 1
+position = Vector2(2500, 2000)
+script = ExtResource("14_efubw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="GizliYerküp"]
+visible = false
+z_index = 1
+position = Vector2(-0.5, 1)
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_4cmfj")
+
+[node name="Sprite2D" type="Sprite2D" parent="GizliYerküp"]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("7_e13tw")
+
+[node name="Area2D" type="Area2D" parent="GizliYerküp"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GizliYerküp/Area2D"]
+shape = SubResource("RectangleShape2D_qlg4q")
+debug_color = Color(0.964932, 9.62615e-08, 0.489773, 0.42)
+
+[node name="C4" type="Area2D" parent="." groups=["c4", "düşman"]]
+position = Vector2(2500, 1000)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="C4"]
+shape = SubResource("RectangleShape2D_5h24j")
+
+[node name="Sprite2D" type="Sprite2D" parent="C4"]
+modulate = Color(0, 0.32941177, 0, 1)
+scale = Vector2(0.0926984, 0.0879962)
+texture = ExtResource("2_ic0lq")
+
+[node name="C42" type="Area2D" parent="." groups=["c4", "düşman"]]
+position = Vector2(2500, 1000)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="C42"]
+shape = SubResource("RectangleShape2D_5h24j")
+
+[node name="Sprite2D" type="Sprite2D" parent="C42"]
+modulate = Color(0, 0.3372549, 0, 1)
+scale = Vector2(0.0264549, 0.027624)
+texture = ExtResource("2_ic0lq")
+
+[node name="C43" type="Area2D" parent="." groups=["c4", "düşman"]]
+position = Vector2(2500, 1000)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="C43"]
+shape = SubResource("RectangleShape2D_5h24j")
+
+[node name="Sprite2D" type="Sprite2D" parent="C43"]
+modulate = Color(0, 0.33333334, 0, 1)
+scale = Vector2(0.0264549, 0.027624)
+texture = ExtResource("2_ic0lq")
+
+[node name="Kardeş" type="Sprite2D" parent="."]
+position = Vector2(700, 487)
+scale = Vector2(0.5, 0.5)
+
+[node name="Pide" type="Area2D" parent="."]
+z_index = 1
+position = Vector2(2500, 1500)
+script = ExtResource("9_tp5lk")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pide"]
+scale = Vector2(1.00987, 1.00318)
+polygon = PackedVector2Array(-23, -31, -17, -31, -10, -29, 18, -5, 25, 5, 25, 15, 20, 28, 4, 28, -11, 22, -25, 9, -32, -3, -32, -23, -27, -31)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pide"]
+texture = ExtResource("10_r33x4")
+
+[node name="Pide2" type="Area2D" parent="."]
+z_index = 1
+position = Vector2(2500, 1500)
+script = ExtResource("9_tp5lk")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pide2"]
+scale = Vector2(1.00987, 1.00318)
+polygon = PackedVector2Array(-23, -31, -17, -31, -10, -29, 18, -5, 25, 5, 25, 15, 20, 28, 4, 28, -11, 22, -25, 9, -32, -3, -32, -23, -27, -31)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pide2"]
+texture = ExtResource("10_r33x4")
+
+[node name="Pide3" type="Area2D" parent="."]
+z_index = 1
+position = Vector2(2500, 1500)
+script = ExtResource("9_tp5lk")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pide3"]
+scale = Vector2(1.00987, 1.00318)
+polygon = PackedVector2Array(-23, -31, -17, -31, -10, -29, 18, -5, 25, 5, 25, 15, 20, 28, 4, 28, -11, 22, -25, 9, -32, -3, -32, -23, -27, -31)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pide3"]
+texture = ExtResource("10_r33x4")
+
+[node name="Simit" type="Area2D" parent="."]
+z_index = 1
+position = Vector2(2500, 1500)
+script = ExtResource("9_tp5lk")
+
+[node name="Sprite2D" type="Sprite2D" parent="Simit"]
+texture = ExtResource("13_3y7on")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Simit"]
+shape = SubResource("CircleShape2D_tnm7o")
+
+[node name="Pogaca" type="Area2D" parent="."]
+z_index = 1
+position = Vector2(2500, 1500)
+script = ExtResource("9_tp5lk")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pogaca"]
+scale = Vector2(1.00987, 1.00318)
+polygon = PackedVector2Array(-7.5105, -6.83301, 12.2941, -5.83618, 16.255, -0.852051, 16.255, 4.13214, 7.34302, 10.1131, -6.52026, 9.11627, -16.4225, 2.13849, -16.4225, -0.852051)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pogaca"]
+texture = ExtResource("14_tnm7o")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_76ecl")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(189, 140)
+rotation = 1.5721142
+
+[node name="DuvarDiken" type="CharacterBody2D" parent="Path2D/PathFollow2D" groups=["düşman"]]
+position = Vector2(41, -20)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/DuvarDiken"]
+shape = SubResource("CircleShape2D_oftdb")
+
+[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D/DuvarDiken"]
+position = Vector2(1.00403, -0.995951)
+scale = Vector2(1.53172, 1.53645)
+texture = ExtResource("19_76ecl")
+
+[node name="DönerDiken" type="CharacterBody2D" parent="." groups=["düşman"]]
+position = Vector2(2500, 2000)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DönerDiken"]
+position = Vector2(0, 700)
+shape = SubResource("CircleShape2D_6us46")
+
+[node name="Sprite2D" type="Sprite2D" parent="DönerDiken/CollisionShape2D"]
+position = Vector2(0.5, 0)
+scale = Vector2(1.32812, 1.34375)
+texture = ExtResource("19_76ecl")
+
+[node name="Çicek1" type="Sprite2D" parent="."]
+position = Vector2(403, 247)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("15_efubw")
+
+[node name="Çicek2" type="Sprite2D" parent="."]
+position = Vector2(2973, 1008)
+scale = Vector2(0.278325, 0.3)
+texture = ExtResource("16_in46o")
+
+[node name="Çicek3" type="Sprite2D" parent="."]
+position = Vector2(4187, 3000)
+scale = Vector2(0.376254, 0.398601)
+texture = ExtResource("17_tp5lk")
+
+[node name="Çicek4" type="Sprite2D" parent="."]
+position = Vector2(2467, 1827)
+scale = Vector2(0.344884, 0.402724)
+texture = ExtResource("18_e13tw")
+
+[node name="Çicek5" type="Sprite2D" parent="."]
+position = Vector2(1187, 1663.75)
+scale = Vector2(0.211995, 0.207711)
+texture = ExtResource("19_mlftw")
+
+[connection signal="area_entered" from="Yenküp/Area2d" to="Yenküp" method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Yenküp/Area2d" to="Yenküp" method="_on_area_2d_body_entered"]
+[connection signal="area_entered" from="GizliYerküp/Area2D" to="GizliYerküp" method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="GizliYerküp/Area2D" to="GizliYerküp" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Pide" to="Pide" method="_on_body_entered"]
+[connection signal="body_entered" from="Pide2" to="Pide2" method="_on_body_entered"]
+[connection signal="body_entered" from="Pide3" to="Pide3" method="_on_body_entered"]
+[connection signal="body_entered" from="Simit" to="Simit" method="_on_body_entered"]
+[connection signal="body_entered" from="Pogaca" to="Pogaca" method="_on_body_entered"]

@@ -1,0 +1,309 @@
+[gd_scene load_steps=32 format=3 uid="uid://cl7g2oerxqxog"]
+
+[ext_resource type="Script" uid="uid://bhkevcuvty4ay" path="res://src/mainscene/main.gd" id="1_7cjc0"]
+[ext_resource type="PackedScene" uid="uid://bn6bqmhm3c7g5" path="res://scene/United.tscn" id="2_3ifg2"]
+[ext_resource type="Script" uid="uid://cy44eks5dodxm" path="res://src/mainscene/yenküp.gd" id="3_3ifg2"]
+[ext_resource type="Script" uid="uid://d2nj7yxsmcxoj" path="res://src/mainscene/gizliyerküp.gd" id="6_3ifg2"]
+[ext_resource type="Texture2D" uid="uid://jr38i4cgayeh" path="res://assets/Dügme/Renk.png" id="22_kse5y"]
+[ext_resource type="Texture2D" uid="uid://lrvu5lhqtrip" path="res://assets/Skin/GizliYerküpYüz.png" id="30_bjmox"]
+[ext_resource type="Texture2D" uid="uid://8ulyfscam0vn" path="res://assets/Skin/Yüz.png" id="32_4nrv4"]
+[ext_resource type="Script" uid="uid://ce0hemdjfnat" path="res://src/mainscene/pide.gd" id="33_abthc"]
+[ext_resource type="Texture2D" uid="uid://do3j6r5xmgil6" path="res://assets/Yemek/Pide.png" id="34_bjmox"]
+[ext_resource type="Texture2D" uid="uid://dbp2cit8ypkwo" path="res://assets/Yemek/Simit.png" id="35_4nrv4"]
+[ext_resource type="Texture2D" uid="uid://d8lvemfyvjtu" path="res://assets/Skin/C4.png" id="35_oftdb"]
+[ext_resource type="Texture2D" uid="uid://11i6jbvv8b5j" path="res://assets/Yemek/Pogaca.png" id="36_bcol2"]
+[ext_resource type="Texture2D" uid="uid://b0hp2bpeu8cfc" path="res://assets/Diken.png" id="39_bcol2"]
+[ext_resource type="Texture2D" uid="uid://dosx6phg67v7b" path="res://assets/Skin/Kutu.png" id="39_us3vy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7o3c3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oftdb"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7o3c3"]
+material = SubResource("StandardMaterial3D_oftdb")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6us46"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fciaq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fciaq"]
+albedo_color = Color(0, 0.31764707, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_76ecl"]
+material = SubResource("StandardMaterial3D_fciaq")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_76ecl"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_myktr"]
+radius = 0.32617038
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c67pv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8omi5"]
+albedo_color = Color(0, 0.23529412, 0.047058824, 1)
+albedo_texture = ExtResource("35_oftdb")
+
+[sub_resource type="BoxMesh" id="BoxMesh_fciaq"]
+material = SubResource("StandardMaterial3D_8omi5")
+
+[sub_resource type="Curve3D" id="Curve3D_bcol2"]
+closed = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 45, 0, -45, 0, 0, 0, 0, 0, 0, 45, 0, 45, 0, 0, 0, 0, 0, 0, -45, 0, 45, 0, 0, 0, 0, 0, 0, -45, 0, -45),
+"tilts": PackedFloat32Array(0, 0, 0, 0)
+}
+point_count = 4
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_us3vy"]
+radius = 0.3411178
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tq2wc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tq2wc"]
+albedo_texture = ExtResource("39_us3vy")
+metallic = 1.0
+metallic_specular = 0.0
+metallic_texture = ExtResource("22_kse5y")
+
+[sub_resource type="BoxMesh" id="BoxMesh_h5klq"]
+material = SubResource("StandardMaterial3D_tq2wc")
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_7cjc0")
+
+[node name="Yüzey" parent="." instance=ExtResource("2_3ifg2")]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, -3.6, 0)
+
+[node name="Yenküp" type="CharacterBody3D" parent="."]
+script = ExtResource("3_3ifg2")
+
+[node name="KameraArka" type="Camera3D" parent="Yenküp"]
+transform = Transform3D(1, 0, 0, 0, 0.9396927, 0.34202015, 0, -0.34202015, 0.9396927, 0, 2, 4)
+current = true
+
+[node name="KameraÖn" type="Camera3D" parent="Yenküp"]
+transform = Transform3D(-1, 5.1643607e-08, -1.4188964e-07, 0, 0.9396926, 0.34202015, 1.509958e-07, 0.34202015, -0.9396926, 0, 3.583963, -6.2899733)
+fov = 37.849285
+
+[node name="KameraIlk" type="Camera3D" parent="Yenküp"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Yenküp"]
+shape = SubResource("BoxShape3D_7o3c3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Yenküp"]
+transform = Transform3D(1, 0, 0, 0, 0.021326311, -0.99977255, 0, 0.99977255, 0.021326311, 0, 0, 0)
+mesh = SubResource("BoxMesh_7o3c3")
+
+[node name="Yüz" type="Sprite3D" parent="Yenküp"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5091338)
+texture = ExtResource("32_4nrv4")
+
+[node name="Area3D" type="Area3D" parent="Yenküp"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Yenküp/Area3D"]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
+shape = SubResource("BoxShape3D_6us46")
+debug_color = Color(0, 0, 0, 0.41960785)
+
+[node name="GizliYerküp" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.346981)
+script = ExtResource("6_3ifg2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GizliYerküp"]
+shape = SubResource("BoxShape3D_fciaq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="GizliYerküp"]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, 0, 0)
+mesh = SubResource("BoxMesh_76ecl")
+
+[node name="Area3D" type="Area3D" parent="GizliYerküp" groups=["düşman"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GizliYerküp/Area3D"]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
+shape = SubResource("BoxShape3D_76ecl")
+
+[node name="Yüz" type="Sprite3D" parent="GizliYerküp"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, -0.509)
+texture = ExtResource("30_bjmox")
+
+[node name="Pide" type="Area3D" parent="."]
+script = ExtResource("33_abthc")
+
+[node name="Sprite3D" type="Sprite3D" parent="Pide"]
+texture = ExtResource("34_bjmox")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pide"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0010544658, 0)
+shape = SubResource("SphereShape3D_myktr")
+
+[node name="Pide2" type="Area3D" parent="."]
+script = ExtResource("33_abthc")
+
+[node name="Sprite3D" type="Sprite3D" parent="Pide2"]
+texture = ExtResource("34_bjmox")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pide2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0010544658, 0)
+shape = SubResource("SphereShape3D_myktr")
+
+[node name="Pide3" type="Area3D" parent="."]
+script = ExtResource("33_abthc")
+
+[node name="Sprite3D" type="Sprite3D" parent="Pide3"]
+texture = ExtResource("34_bjmox")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pide3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0010544658, 0)
+shape = SubResource("SphereShape3D_myktr")
+
+[node name="Simit" type="Area3D" parent="."]
+script = ExtResource("33_abthc")
+
+[node name="Sprite3D" type="Sprite3D" parent="Simit"]
+texture = ExtResource("35_4nrv4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Simit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0010544658, 0)
+shape = SubResource("SphereShape3D_myktr")
+
+[node name="Simit2" type="Area3D" parent="."]
+script = ExtResource("33_abthc")
+
+[node name="Sprite3D" type="Sprite3D" parent="Simit2"]
+texture = ExtResource("35_4nrv4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Simit2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0010544658, 0)
+shape = SubResource("SphereShape3D_myktr")
+
+[node name="Poğaça" type="Area3D" parent="."]
+script = ExtResource("33_abthc")
+
+[node name="Sprite3D" type="Sprite3D" parent="Poğaça"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.03252232)
+texture = ExtResource("36_bcol2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Poğaça"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0010544658, 0)
+shape = SubResource("SphereShape3D_myktr")
+
+[node name="Poğaça2" type="Area3D" parent="."]
+script = ExtResource("33_abthc")
+
+[node name="Sprite3D" type="Sprite3D" parent="Poğaça2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.03252232)
+texture = ExtResource("36_bcol2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Poğaça2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0010544658, 0)
+shape = SubResource("SphereShape3D_myktr")
+
+[node name="C41" type="Area3D" parent="." groups=["c4", "düşman"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.99, -2)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="C41"]
+shape = SubResource("BoxShape3D_c67pv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="C41"]
+mesh = SubResource("BoxMesh_fciaq")
+
+[node name="C42" type="Area3D" parent="." groups=["c4", "düşman"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.99, -2)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="C42"]
+shape = SubResource("BoxShape3D_c67pv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="C42"]
+mesh = SubResource("BoxMesh_fciaq")
+
+[node name="C43" type="Area3D" parent="." groups=["c4", "düşman"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.99, -2)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="C43"]
+shape = SubResource("BoxShape3D_c67pv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="C43"]
+mesh = SubResource("BoxMesh_fciaq")
+
+[node name="C44" type="Area3D" parent="." groups=["c4", "düşman"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.99, -2)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="C44"]
+shape = SubResource("BoxShape3D_c67pv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="C44"]
+mesh = SubResource("BoxMesh_fciaq")
+
+[node name="C45" type="Area3D" parent="." groups=["c4", "düşman"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.99, -2)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="C45"]
+shape = SubResource("BoxShape3D_c67pv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="C45"]
+mesh = SubResource("BoxMesh_fciaq")
+skeleton = NodePath("../../C45")
+
+[node name="Path3D" type="Path3D" parent="."]
+curve = SubResource("Curve3D_bcol2")
+debug_custom_color = Color(1, 0, 0, 1)
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(-0.9999993, 0, -8.742273e-08, 0, 0.99999356, 0, 8.742271e-08, 0, -0.99999946, 45, 0, -45)
+
+[node name="DikenDuvar" type="Area3D" parent="Path3D/PathFollow3D" groups=["düşman"]]
+transform = Transform3D(-3.0986748, -0.04452386, 2.5290782, 0.0020485783, 3.9993346, 0.07291735, -2.5294688, 0.057782046, -3.0981362, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Path3D/PathFollow3D/DikenDuvar"]
+shape = SubResource("SphereShape3D_us3vy")
+
+[node name="Sprite3D" type="Sprite3D" parent="Path3D/PathFollow3D/DikenDuvar"]
+texture = ExtResource("39_bcol2")
+
+[node name="Kutu1" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+mass = 0.001
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kutu1"]
+shape = SubResource("BoxShape3D_tq2wc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kutu1"]
+mesh = SubResource("BoxMesh_h5klq")
+
+[node name="Kutu2" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+mass = 0.001
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kutu2"]
+shape = SubResource("BoxShape3D_tq2wc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kutu2"]
+mesh = SubResource("BoxMesh_h5klq")
+
+[node name="Kutu3" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+mass = 0.001
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kutu3"]
+shape = SubResource("BoxShape3D_tq2wc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kutu3"]
+mesh = SubResource("BoxMesh_h5klq")
+
+[connection signal="area_entered" from="Yenküp/Area3D" to="Yenküp" method="_on_area_3d_area_entered"]
+[connection signal="body_entered" from="Yenküp/Area3D" to="Yenküp" method="_on_area_3d_body_entered"]
+[connection signal="area_entered" from="GizliYerküp/Area3D" to="GizliYerküp" method="_on_area_3d_area_entered"]
+[connection signal="body_entered" from="Pide" to="Pide" method="_on_body_entered"]
+[connection signal="body_entered" from="Pide2" to="Pide2" method="_on_body_entered"]
+[connection signal="body_entered" from="Pide3" to="Pide3" method="_on_body_entered"]
+[connection signal="body_entered" from="Simit" to="Simit" method="_on_body_entered"]
+[connection signal="body_entered" from="Simit2" to="Simit2" method="_on_body_entered"]
+[connection signal="body_entered" from="Poğaça" to="Poğaça" method="_on_body_entered"]
+[connection signal="body_entered" from="Poğaça2" to="Poğaça2" method="_on_body_entered"]
+[connection signal="body_entered" from="C41" to="C41" method="_on_body_entered"]
+[connection signal="body_entered" from="C42" to="C42" method="_on_body_entered"]
+[connection signal="body_entered" from="C43" to="C43" method="_on_body_entered"]
+[connection signal="body_entered" from="C44" to="C44" method="_on_body_entered"]
+[connection signal="body_entered" from="C45" to="C45" method="_on_body_entered"]

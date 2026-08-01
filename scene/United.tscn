@@ -1,0 +1,390 @@
+[gd_scene load_steps=53 format=3 uid="uid://bn6bqmhm3c7g5"]
+
+[ext_resource type="Texture2D" uid="uid://crpt2ludp7d8y" path="res://assets/Skin/Çim.png" id="1_2w4jd"]
+[ext_resource type="Script" uid="uid://dkdxy3r50pray" path="res://src/ui.gd" id="1_ajxsv"]
+[ext_resource type="Texture2D" uid="uid://cj8uy5xhxh1k4" path="res://assets/Skin/Ağaç.png" id="2_11w1s"]
+[ext_resource type="Texture2D" uid="uid://v8htybqwfqfb" path="res://assets/Dügme/Ev.png" id="2_a27ie"]
+[ext_resource type="Texture2D" uid="uid://don568q25yttl" path="res://assets/Dügme/Yinele.png" id="3_2nk0p"]
+[ext_resource type="Texture2D" uid="uid://bsccgqta7ka8x" path="res://assets/Çiçek/Cicek1.png" id="3_d0gjl"]
+[ext_resource type="Texture2D" uid="uid://bqlngg5ofpe2m" path="res://assets/Çiçek/Cicek2.png" id="4_h4m8o"]
+[ext_resource type="Texture2D" uid="uid://d3ybejgevw8e1" path="res://assets/Dügme/Kamera.png" id="4_jrmek"]
+[ext_resource type="Texture2D" uid="uid://dk0yo8b3korq5" path="res://assets/Dügme/Kamerabas.png" id="5_qvbwn"]
+[ext_resource type="Texture2D" uid="uid://cpjinxemuywel" path="res://assets/Çiçek/Cicek3.png" id="5_uvjy0"]
+[ext_resource type="Texture2D" uid="uid://cimlfoj0x4mwx" path="res://assets/Dügme/İleri.png" id="6_2u0lq"]
+[ext_resource type="Texture2D" uid="uid://btp77yohjqnhm" path="res://assets/Çiçek/Cicek4.png" id="6_frfis"]
+[ext_resource type="Texture2D" uid="uid://btgecxb8sqseu" path="res://assets/Dügme/İleribas.png" id="7_ddl4y"]
+[ext_resource type="Texture2D" uid="uid://co1gpnbicp47n" path="res://assets/Çiçek/Cicek5.png" id="7_jstdd"]
+[ext_resource type="Texture2D" uid="uid://dgmjq8wajn0qr" path="res://assets/Dügme/Geri.png" id="8_2w4jd"]
+[ext_resource type="Texture2D" uid="uid://cvvqhcavust25" path="res://assets/Dügme/Geribas.png" id="9_11w1s"]
+[ext_resource type="Texture2D" uid="uid://fqrmhjxhdn3f" path="res://assets/Dügme/Sol.png" id="10_d0gjl"]
+[ext_resource type="Texture2D" uid="uid://dqgi017m68jnc" path="res://assets/Dügme/Evbas.png" id="10_h4m8o"]
+[ext_resource type="Texture2D" uid="uid://bdkrk3q0lak0q" path="res://assets/Dügme/Solbas.png" id="11_h4m8o"]
+[ext_resource type="Texture2D" uid="uid://byugpdurxwekj" path="res://assets/Dügme/Yinelebas.png" id="12_frfis"]
+[ext_resource type="Texture2D" uid="uid://b87kw8ydyrccb" path="res://assets/Dügme/Sağ.png" id="12_uvjy0"]
+[ext_resource type="Texture2D" uid="uid://c0fntefiygwj0" path="res://assets/Dügme/Sağbas.png" id="13_frfis"]
+[ext_resource type="Texture2D" uid="uid://dpfyfvyvsouxk" path="res://assets/Dügme/Zıpla.png" id="14_jstdd"]
+[ext_resource type="Texture2D" uid="uid://bgg5me8nubb70" path="res://assets/Dügme/Zıplabas.png" id="15_sn4hj"]
+[ext_resource type="Texture2D" uid="uid://do3j6r5xmgil6" path="res://assets/Yemek/Pide.png" id="16_xnekm"]
+[ext_resource type="Texture2D" uid="uid://coinm8owsjp1j" path="res://assets/Hikaye/Mutlu???.png" id="18_4wvqa"]
+[ext_resource type="Texture2D" uid="uid://b8u3jy2epeyaq" path="res://assets/Hikaye/Mutlu.png" id="19_21vk2"]
+[ext_resource type="Texture2D" uid="uid://6fjmrrcfln5h" path="res://assets/Hikaye/Üzgün.png" id="20_mijv8"]
+[ext_resource type="Texture2D" uid="uid://dho64vc0awtpw" path="res://assets/Hikaye/Rekor.png" id="21_1bld7"]
+[ext_resource type="Texture2D" uid="uid://dm5focmld2j1l" path="res://assets/Yenküpceset.png" id="30_11w1s"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_sn4hj"]
+rough = true
+
+[sub_resource type="Environment" id="Environment_2w4jd"]
+background_mode = 1
+background_color = Color(0.43298304, 0.64952326, 1, 1)
+ambient_light_source = 1
+
+[sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_11w1s"]
+
+[sub_resource type="Compositor" id="Compositor_d0gjl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2w4jd"]
+size = Vector3(1, 0.038101196, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2w4jd"]
+size = Vector3(1, 0.05, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w7vup"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4wvqa"]
+albedo_color = Color(2.7675182e-07, 0.2347391, 0.047848463, 1)
+albedo_texture = ExtResource("1_2w4jd")
+metallic_specular = 0.0
+roughness_texture = SubResource("AtlasTexture_w7vup")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_21vk2"]
+size = Vector3(1, 4.756134, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tnm7o"]
+albedo_color = Color(0.3906024, 0.19885457, 0, 1)
+albedo_texture = ExtResource("2_11w1s")
+
+[sub_resource type="BoxMesh" id="BoxMesh_mijv8"]
+material = SubResource("StandardMaterial3D_tnm7o")
+uv2_padding = 0.0
+size = Vector3(1, 3, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lxsi4"]
+albedo_color = Color(0, 0.43137255, 0, 1)
+albedo_texture = ExtResource("1_2w4jd")
+metallic = 1.0
+metallic_texture = ExtResource("1_2w4jd")
+
+[sub_resource type="SphereMesh" id="SphereMesh_1bld7"]
+material = SubResource("StandardMaterial3D_lxsi4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cayyl"]
+albedo_color = Color(0, 0.36078432, 0, 1)
+albedo_texture = ExtResource("1_2w4jd")
+
+[sub_resource type="PrismMesh" id="PrismMesh_dsbqp"]
+material = SubResource("StandardMaterial3D_cayyl")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w22y4"]
+albedo_color = Color(0.003921569, 0.29803923, 0, 1)
+albedo_texture = ExtResource("1_2w4jd")
+
+[sub_resource type="BoxMesh" id="BoxMesh_lf80w"]
+material = SubResource("StandardMaterial3D_w22y4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kse5y"]
+albedo_color = Color(0, 0.31764707, 0, 1)
+albedo_texture = ExtResource("1_2w4jd")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_bmilr"]
+material = SubResource("StandardMaterial3D_kse5y")
+top_radius = 0.0
+height = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4nrv4"]
+albedo_color = Color(0, 0.343687, 0, 1)
+albedo_texture = ExtResource("1_2w4jd")
+
+[sub_resource type="TorusMesh" id="TorusMesh_go7du"]
+material = SubResource("StandardMaterial3D_4nrv4")
+inner_radius = 0.009
+outer_radius = 0.681
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_11w1s"]
+size = Vector3(0.063964844, 0.16357422, 1)
+
+[node name="Yüzey" type="StaticBody3D"]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+physics_material_override = SubResource("PhysicsMaterial_sn4hj")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_2w4jd")
+camera_attributes = SubResource("CameraAttributesPhysical_11w1s")
+compositor = SubResource("Compositor_d0gjl")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 33.799232, -2.7436829)
+light_energy = 2.0
+light_indirect_energy = 3.2
+light_angular_distance = 59.14
+shadow_enabled = true
+shadow_opacity = 0.2
+shadow_blur = 0.429
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0.007329643, 0)
+shape = SubResource("BoxShape3D_2w4jd")
+
+[node name="Yüzeygörünüm" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+mesh = SubResource("BoxMesh_2w4jd")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_4wvqa")
+
+[node name="Ağaç1" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0.05, 0.03)
+shape = SubResource("BoxShape3D_21vk2")
+
+[node name="Tahta" type="MeshInstance3D" parent="Ağaç1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07900047, -0.9051889, 0)
+mesh = SubResource("BoxMesh_mijv8")
+skeleton = NodePath("")
+
+[node name="Yaprak" type="MeshInstance3D" parent="Ağaç1"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.07900047, 0.9898608, 0)
+mesh = SubResource("SphereMesh_1bld7")
+skeleton = NodePath("../Tahta")
+
+[node name="Ağaç2" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0.05, 0.03)
+shape = SubResource("BoxShape3D_21vk2")
+
+[node name="Tahta" type="MeshInstance3D" parent="Ağaç2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07900047, -0.9051888, 0)
+mesh = SubResource("BoxMesh_mijv8")
+skeleton = NodePath("")
+
+[node name="Yaprak" type="MeshInstance3D" parent="Ağaç2"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.07900047, 0.9898608, 0)
+mesh = SubResource("PrismMesh_dsbqp")
+skeleton = NodePath("../Tahta")
+
+[node name="Ağaç3" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0.05, 0.03)
+shape = SubResource("BoxShape3D_21vk2")
+
+[node name="Tahta" type="MeshInstance3D" parent="Ağaç3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07900238, -0.9051888, 0)
+mesh = SubResource("BoxMesh_mijv8")
+skeleton = NodePath("")
+
+[node name="Yaprak" type="MeshInstance3D" parent="Ağaç3"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.07900238, 0.9898608, 0)
+mesh = SubResource("BoxMesh_lf80w")
+skeleton = NodePath("../Tahta")
+
+[node name="Ağaç4" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0.05, 0.03)
+shape = SubResource("BoxShape3D_21vk2")
+
+[node name="Tahta" type="MeshInstance3D" parent="Ağaç4"]
+transform = Transform3D(0.9994646, 0, 0.032719083, 0, 1, 0, -0.032719083, 0, 0.9994646, 0.078998566, -0.905, 0)
+mesh = SubResource("BoxMesh_mijv8")
+skeleton = NodePath("")
+
+[node name="Yaprak" type="MeshInstance3D" parent="Ağaç4"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.079, 0.99, 0)
+mesh = SubResource("CylinderMesh_bmilr")
+skeleton = NodePath("../Tahta")
+
+[node name="Ağaç5" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0.05, 0)
+shape = SubResource("BoxShape3D_21vk2")
+
+[node name="Tahta" type="MeshInstance3D" parent="Ağaç5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07900238, -0.9051888, 0)
+mesh = SubResource("BoxMesh_mijv8")
+skeleton = NodePath("")
+
+[node name="Yaprak" type="MeshInstance3D" parent="Ağaç5"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.07900238, 0.32154393, 0)
+mesh = SubResource("TorusMesh_go7du")
+skeleton = NodePath("../Tahta")
+
+[node name="Çiçek1" type="Sprite3D" parent="."]
+transform = Transform3D(0.001, 0, 0, 0, -4.371139e-11, 0.001, 0, -0.001, -4.371139e-11, -0.010513992, 0.4951, -0.2595851)
+texture = ExtResource("3_d0gjl")
+
+[node name="Çiçek2" type="Sprite3D" parent="."]
+transform = Transform3D(0.001, 0, 0, 0, -4.371139e-11, 0.001, 0, -0.001, -4.371139e-11, -0.3747049, 0.4955999, 0.30495432)
+texture = ExtResource("4_h4m8o")
+
+[node name="Çiçek3" type="Sprite3D" parent="."]
+transform = Transform3D(0.001, 0, 0, 0, -4.371139e-11, 0.001, 0, -0.001, -4.371139e-11, 0.1636615, 0.49575937, 0.23452483)
+texture = ExtResource("5_uvjy0")
+
+[node name="Çiçek4" type="Sprite3D" parent="."]
+transform = Transform3D(0.001, 0, 0, 0, -4.371139e-11, 0.001, 0, -0.001, -4.371139e-11, 0.30469126, 0.49663928, -0.25797367)
+texture = ExtResource("6_frfis")
+
+[node name="Çiçek5" type="Sprite3D" parent="."]
+transform = Transform3D(0.001, 0, 0, 0, -4.371139e-11, 0.001, 0, -0.001, -4.371139e-11, -0.14258884, 0.4951, 0.4321319)
+texture = ExtResource("7_jstdd")
+
+[node name="Sınır1" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, -0.6414522, 0, 0.001)
+shape = SubResource("BoxShape3D_11w1s")
+debug_color = Color(0, 0, 0, 1)
+
+[node name="Sınır2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0.63922465, 0, 0.0023)
+shape = SubResource("BoxShape3D_11w1s")
+debug_color = Color(0, 0, 0, 1)
+
+[node name="Sınır3" type="CollisionShape3D" parent="."]
+transform = Transform3D(-5.6824796e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.6824796e-08, 0.04909046, 0, 0.6380592)
+shape = SubResource("BoxShape3D_11w1s")
+debug_color = Color(0, 0, 0, 1)
+
+[node name="Sınır4" type="CollisionShape3D" parent="."]
+transform = Transform3D(-5.6824796e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.6824796e-08, 0.04909046, 0, -0.6279544)
+shape = SubResource("BoxShape3D_11w1s")
+debug_color = Color(0, 0, 0, 1)
+
+[node name="UI" type="CanvasLayer" parent="."]
+script = ExtResource("1_ajxsv")
+
+[node name="PideIkon" type="TextureRect" parent="UI"]
+z_index = 2
+offset_right = 64.0
+offset_bottom = 64.0
+scale = Vector2(3, 3)
+texture = ExtResource("16_xnekm")
+stretch_mode = 2
+
+[node name="Skor" type="Label" parent="UI"]
+offset_left = 176.0
+offset_top = 41.0
+offset_right = 303.0
+offset_bottom = 178.0
+theme_override_font_sizes/font_size = 100
+text = "-5"
+
+[node name="İleridüğme" type="TouchScreenButton" parent="UI"]
+position = Vector2(1, 938)
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("6_2u0lq")
+texture_pressed = ExtResource("7_ddl4y")
+action = "ui_up"
+
+[node name="Geridüğme" type="TouchScreenButton" parent="UI"]
+position = Vector2(1, 1069)
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("8_2w4jd")
+texture_pressed = ExtResource("9_11w1s")
+action = "ui_down"
+
+[node name="Kontroller" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="EvDüğme" type="TouchScreenButton" parent="UI/Kontroller"]
+position = Vector2(-131, -600)
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("2_a27ie")
+texture_pressed = ExtResource("10_h4m8o")
+
+[node name="YineleDüğme" type="TouchScreenButton" parent="UI/Kontroller"]
+position = Vector2(-262, -600)
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("3_2nk0p")
+texture_pressed = ExtResource("12_frfis")
+
+[node name="KameraDüğme" type="TouchScreenButton" parent="UI/Kontroller"]
+position = Vector2(-394, -600)
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("4_jrmek")
+texture_pressed = ExtResource("5_qvbwn")
+
+[node name="ZıplaDüğme" type="TouchScreenButton" parent="UI/Kontroller"]
+position = Vector2(-265, 469)
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("14_jstdd")
+texture_pressed = ExtResource("15_sn4hj")
+action = "ui_jump"
+
+[node name="SolDüğme" type="TouchScreenButton" parent="UI/Kontroller"]
+position = Vector2(-397, 469)
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("10_d0gjl")
+texture_pressed = ExtResource("11_h4m8o")
+action = "rotate_left"
+
+[node name="SağDüğme" type="TouchScreenButton" parent="UI/Kontroller"]
+position = Vector2(-133, 469)
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("12_uvjy0")
+texture_pressed = ExtResource("13_frfis")
+action = "rotate_right"
+
+[node name="SonPencere" type="Window" parent="UI"]
+oversampling_override = 1.0
+initial_position = 1
+size = Vector2i(1800, 1150)
+visible = false
+
+[node name="MutluSon?" type="Sprite2D" parent="UI/SonPencere"]
+visible = false
+position = Vector2(899.99994, 575.0001)
+scale = Vector2(1.125, 0.95833355)
+texture = ExtResource("18_4wvqa")
+
+[node name="MultuSon" type="Sprite2D" parent="UI/SonPencere"]
+visible = false
+position = Vector2(900, 550.5)
+scale = Vector2(1.125, 0.9175)
+texture = ExtResource("19_21vk2")
+
+[node name="ÜzgünSon" type="Sprite2D" parent="UI/SonPencere"]
+visible = false
+position = Vector2(901.50006, 551.50006)
+scale = Vector2(1.123125, 0.91416675)
+texture = ExtResource("20_mijv8")
+
+[node name="RekorSon" type="Sprite2D" parent="UI/SonPencere"]
+visible = false
+position = Vector2(899.9999, 549.99994)
+scale = Vector2(1.125, 0.91666657)
+texture = ExtResource("21_1bld7")
+
+[node name="ÖlüMetin" type="Label" parent="UI"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -690.0
+offset_top = 93.0
+offset_right = 748.0
+offset_bottom = 231.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "Öldün X( Tekrar Dene???"
+
+[node name="Cesetküp" type="Sprite2D" parent="UI/ÖlüMetin"]
+position = Vector2(697, -248)
+scale = Vector2(6.421875, 6.3828125)
+texture = ExtResource("30_11w1s")
+
+[connection signal="released" from="UI/Kontroller/EvDüğme" to="UI" method="_on_ev_düğme_released"]
+[connection signal="released" from="UI/Kontroller/YineleDüğme" to="UI" method="_on_yinele_düğme_released"]
+[connection signal="released" from="UI/Kontroller/KameraDüğme" to="UI" method="_on_kamera_düğme_released"]
+[connection signal="close_requested" from="UI/SonPencere" to="UI" method="_on_son_pencere_close_requested"]

@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://c44vy4t55c8mc"]
+
+[ext_resource type="Script" uid="uid://bu5bhdxirovsk" path="res://src/mermi.gd" id="1_exfg4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1cvtc"]
+albedo_color = Color(0.81960785, 0.81960785, 0.81960785, 1)
+metallic = 1.0
+metallic_specular = 1.0
+roughness = 0.46
+emission = Color(0.069035396, 0.02947511, 6.016344e-09, 1)
+emission_energy_multiplier = 3.15
+emission_on_uv2 = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_i76ah"]
+material = SubResource("StandardMaterial3D_1cvtc")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_g5n3s"]
+radius = 0.49940202
+
+[node name="Mermi" type="Area3D" groups=["düşman"]]
+process_mode = 3
+rotation_edit_mode = 2
+script = ExtResource("1_exfg4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = SubResource("SphereMesh_i76ah")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("SphereShape3D_g5n3s")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
