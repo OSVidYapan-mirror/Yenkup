@@ -1,60 +1,57 @@
-# YenküpGodot
+# Yenküp
 
-Benim yaptığım ilk video oyunum (ilk oyunumun yeniden yazılmış hali.)
+## BENIOKU-TR
+Note that if you want to see english version, scroll down to README-EN section.
 
-If you want to see enligh version scroll down to README-ENGLISH section.
+Yaptığım ilk video oyunumun Godot/Redot'ta yeniden yazılmış hali.
 
-## Oyun ile alakalı
+### Oyunla alakalı
+Bu oyunda sen şirin bir küpsün ve amacın pideleri yiyerek en yüksek skor'a ulaşmak. Daha fazlası için oyundaki öğreticiye tıkla.
 
-Bu oyunda sen şirin bir küpsün ve amacın pideleri yiyerek en yüksek skor'a ulaşmak. Daha fazlası için oyundaki öğreticiye tıklayın
-
-## Yayınlamalar
-
-Codeberg'e yayınlamamayı planlıyom (burda sadece kaynak kodu olacaktır). Son sürüm yayınlamar itch.io'da eski yayınlamalar ise archive.org'da yayınlıdır. Kod artık codeberg'de dağıtılacaktır.
+### Yayınlamalar
+Codeberg'de sadece kaynak kodu yayınlanacaktır eğer derlenmiş yapıları istiyorsan itch.io linkini ziyaret edebilirsin.
 
 Itch.io linki: [https://winfilmiyapan103.itch.io/yenkup](https://winfilmiyapan103.itch.io/yenkup)
 
-## Gerekenler
+### Gerekenler
+Redot 26.2 LTS
 
-Redot 26.1 LTS Android Platorm ve Build tools ve OpenJDK (Android için)
+OpenJDK yada android'de Godot (Android için)
 
-## Android Derlemesi
+Android Platorm ve Build tools (Android için)
 
-Android için uygulamayı derlemek için şu komutları girmeniz gerek
+### APK İmzalaması
+Bozuk olduğu için, lütfen varsayılan imzalama işlemini kullanma. APK'yi imzalamak için şu komutu girmelisin. (Ad:OSVidYapan Şifre:111111)
 
-./zipalign -P 16 -f -v 4 Yenküp.Apk 2Yenküp.Apk ./apksigner sign -ks Yenküp.keystore 2Yenküp.apk "Ad OSVidYapan şifre 111111"
+./apksigner sign -ks Yenküp.jks Yenküp.apk
 
-## Lisans
+### Lisans
+LICENSE klasörünü görün. Kısaca bu proje ek haklar ile CC0 lisansındadır ama bu üçüncü parti olan şeylere uygulamaz. 
 
-LICENSE klasörünü görün.
+___
 
-# README-ENGLISH
+## README-EN
+My first video game rewritten in Godot/Redot.
 
-My first video game (the rewritten version of my first game.)
+### About the game
+In this game you are a little cube and your goal is to eat the pides while escaping your enemies. See more on the game tutorial itself.
 
-## About
-
-In this game, you're a cute cube, and your goal is to get to the highest score by eating the pita. Click on the tutorial in the game for more
-
-## Publishing
-
-I don't plan publish to Codeberg (there will be only the source code here).
-Releases are released on Itch.io and the old releases are released on archive.org. The code will now be distributed in codeberg.
+### Publishing
+In codeberg, only the source code will be released and the executables can be found at itch.io
 
 Itch.io link: https://winfilmiyapan103.itch.io/yenkup
 
-## What's needed
+### What's needed
+Redot 26.2 LTS
 
-Redot 26.1 LTS Android Platorm and Build tools and OpenJDK (for Android)
+OpenJDK or Godot on Android (For Android)
 
-## Android Compilation
+Android Platorm ve Build tools (For Android)
 
-To compile the app for Android, you need to enter these commands
+### APK Signing
+Because its broken, please do not use the built in signing system. This command will sign the apk manually.(Name: OSVidYapan Password: 111111)
 
-./zipalign -P 16 -f -v 4 Yenküp.Apk 2Yenküp.Apk
-./apksigner sign -ks Yenküp.keystore 2Yenk cubic.apk 
-"Name: OSVidan password: 111111"
+./apksigner sign -ks Yenküp.jks Yenküp.apk 
 
-## License
-
-See the LICENSE folder.
+### License
+See the LICENSE folder. TLDR this project is under CC0 with additional rights granted. This license does not apply to third party stuff.
