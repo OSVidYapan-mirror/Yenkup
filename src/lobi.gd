@@ -43,9 +43,9 @@ func _on_hikaye_başlat_released() -> void:
 	$"HikayeDüğme/HikayePencere/HikayeBaşlat/Hikaye".play()
 #Ayarlar
 func _on_ayarlar_düğme_released():
-	$"AyarlarDüğme/Ayarlar".show()
+	$"AyarlarDüğme/AyarlarPencere".show()
 func _on_ayarlar_close_requested():
-	$"AyarlarDüğme/Ayarlar".hide()
+	$"AyarlarDüğme/AyarlarPencere".hide()
 func _on_kırmızı_released() -> void:
 	conf.set_value("Yenküp","Renk", Color(1,0,0)) 
 	conf.save("user://Yenküp.conf")
