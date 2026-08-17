@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvvqhcavust25"
-path="res://.godot/imported/Geribas.png-fefcc90ad4e872a2889199094228ba4c.ctex"
+uid="uid://qci2prh8xvvn"
+path="res://.godot/imported/Düğmecam.png-2d7e8dae1b3e218dadffdf03defb51c8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dügme/Geribas.png"
-dest_files=["res://.godot/imported/Geribas.png-fefcc90ad4e872a2889199094228ba4c.ctex"]
+source_file="res://assets/Dügme/Düğmecam.png"
+dest_files=["res://.godot/imported/Düğmecam.png-2d7e8dae1b3e218dadffdf03defb51c8.ctex"]
 
 [params]
 

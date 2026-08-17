@@ -1641,18 +1641,3 @@ Files extracted from upstream source:
 - `lib/\{common/,compress/,decompress/,zstd.h,zstd\_errors.h\}`
 
 - `LICENSE`
-
-___
-In addition Yenküp also uses these libraries for the Android build
-
-## Android SDK (platform tools and build tools)
-
-- Upstream: Unknown (proof NOTICE files exist)
-
-- License: Apache 2.0
-
-## OpenJDK (used compliling the appilcation for android)
-
--Upstream: [https://github.com/openjdk/jdk?tab=GPL-2.0-1-ov-file#readme)
-
-- License: GPL with CLASSPATH EXCEPTION (due to this exception our License shouldn't be affected)

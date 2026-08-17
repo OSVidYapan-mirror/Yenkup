@@ -1,5 +1,10 @@
 extends Control
 var conf = ConfigFile.new()
+
+func _ready():
+	$"YenküpLevha".text == "Yenküpppp"
+	print(ProjectSettings.get_setting("application/config/name"))
+	print(ProjectSettings.get_setting("application/config/version"))
 ##Dügmelerin basımı ve etkileri
 #Oyna
 func _on_oyna_düğme_released():

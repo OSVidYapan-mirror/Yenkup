@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0fntefiygwj0"
-path="res://.godot/imported/Sağbas.png-c9a4988f1370eecbc8e5cde03a1a2917.ctex"
+uid="uid://csddn2aa5im8i"
+path="res://.godot/imported/Çiçek2.png-393862bdd5f593f80b00fb7f61211a98.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dügme/Sağbas.png"
-dest_files=["res://.godot/imported/Sağbas.png-c9a4988f1370eecbc8e5cde03a1a2917.ctex"]
+source_file="res://assets/2D/Çiçek/Çiçek2.png"
+dest_files=["res://.godot/imported/Çiçek2.png-393862bdd5f593f80b00fb7f61211a98.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byugpdurxwekj"
-path="res://.godot/imported/Yinelebas.png-50ff6df653ef139fe1dfc472252c70b3.ctex"
+uid="uid://twhw7fb6r0ws"
+path="res://.godot/imported/Çiçek4.png-21c879b55b4ef6647c874f2e4e665ce2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dügme/Yinelebas.png"
-dest_files=["res://.godot/imported/Yinelebas.png-50ff6df653ef139fe1dfc472252c70b3.ctex"]
+source_file="res://assets/2D/Çiçek/Çiçek4.png"
+dest_files=["res://.godot/imported/Çiçek4.png-21c879b55b4ef6647c874f2e4e665ce2.ctex"]
 
 [params]
 

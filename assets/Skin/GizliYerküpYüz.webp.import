@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7yrdjlmvy0p0"
-path="res://.godot/imported/Bulutbas.png-b4b6833d614e5d71d8cbe71baea70ff1.ctex"
+uid="uid://cs6pllv0kg0fn"
+path="res://.godot/imported/GizliYerküpYüz.webp-8d3903b0027d0616b83d12bdc27af7b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dügme/Bulutbas.png"
-dest_files=["res://.godot/imported/Bulutbas.png-b4b6833d614e5d71d8cbe71baea70ff1.ctex"]
+source_file="res://assets/Skin/GizliYerküpYüz.webp"
+dest_files=["res://.godot/imported/GizliYerküpYüz.webp-8d3903b0027d0616b83d12bdc27af7b7.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqgi017m68jnc"
-path="res://.godot/imported/Evbas.png-db27420761ee46b88584c6f87532d6f0.ctex"
+uid="uid://cet6r615byrxo"
+path="res://.godot/imported/Ağaç.png-f51ebd2a13bc562ae470eb15a840825d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dügme/Evbas.png"
-dest_files=["res://.godot/imported/Evbas.png-db27420761ee46b88584c6f87532d6f0.ctex"]
+source_file="res://assets/2D/Ağaç.png"
+dest_files=["res://.godot/imported/Ağaç.png-f51ebd2a13bc562ae470eb15a840825d.ctex"]
 
 [params]
 

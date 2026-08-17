@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Yenküp"
-config/version="2.7.2"
+config/version="2.8"
 run/main_scene="uid://bqamiv708ugx7"
 boot_splash/bg_color=Color(0, 0.41960785, 0.02745098, 1)
 config/features=PackedStringArray("26.2", "GL Compatibility", "Redot")
