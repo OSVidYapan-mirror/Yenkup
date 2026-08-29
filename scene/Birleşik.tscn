@@ -1,35 +1,27 @@
-[gd_scene load_steps=53 format=3 uid="uid://bn6bqmhm3c7g5"]
+[gd_scene load_steps=45 format=3 uid="uid://bn6bqmhm3c7g5"]
 
 [ext_resource type="Texture2D" uid="uid://crpt2ludp7d8y" path="res://assets/Skin/Çim.png" id="1_2w4jd"]
 [ext_resource type="Script" uid="uid://dkdxy3r50pray" path="res://src/ui.gd" id="1_ajxsv"]
-[ext_resource type="Texture2D" uid="uid://cj8uy5xhxh1k4" path="res://assets/Skin/Ağaç.png" id="2_11w1s"]
-[ext_resource type="Texture2D" uid="uid://v8htybqwfqfb" path="res://assets/Dügme/Ev.png" id="2_a27ie"]
-[ext_resource type="Texture2D" uid="uid://don568q25yttl" path="res://assets/Dügme/Yinele.png" id="3_2nk0p"]
-[ext_resource type="Texture2D" uid="uid://bsccgqta7ka8x" path="res://assets/Çiçek/Cicek1.png" id="3_d0gjl"]
-[ext_resource type="Texture2D" uid="uid://bqlngg5ofpe2m" path="res://assets/Çiçek/Cicek2.png" id="4_h4m8o"]
-[ext_resource type="Texture2D" uid="uid://d3ybejgevw8e1" path="res://assets/Dügme/Kamera.png" id="4_jrmek"]
-[ext_resource type="Texture2D" uid="uid://dk0yo8b3korq5" path="res://assets/Dügme/Kamerabas.png" id="5_qvbwn"]
-[ext_resource type="Texture2D" uid="uid://cpjinxemuywel" path="res://assets/Çiçek/Cicek3.png" id="5_uvjy0"]
-[ext_resource type="Texture2D" uid="uid://cimlfoj0x4mwx" path="res://assets/Dügme/İleri.png" id="6_2u0lq"]
-[ext_resource type="Texture2D" uid="uid://btp77yohjqnhm" path="res://assets/Çiçek/Cicek4.png" id="6_frfis"]
-[ext_resource type="Texture2D" uid="uid://btgecxb8sqseu" path="res://assets/Dügme/İleribas.png" id="7_ddl4y"]
-[ext_resource type="Texture2D" uid="uid://co1gpnbicp47n" path="res://assets/Çiçek/Cicek5.png" id="7_jstdd"]
-[ext_resource type="Texture2D" uid="uid://dgmjq8wajn0qr" path="res://assets/Dügme/Geri.png" id="8_2w4jd"]
-[ext_resource type="Texture2D" uid="uid://cvvqhcavust25" path="res://assets/Dügme/Geribas.png" id="9_11w1s"]
-[ext_resource type="Texture2D" uid="uid://fqrmhjxhdn3f" path="res://assets/Dügme/Sol.png" id="10_d0gjl"]
-[ext_resource type="Texture2D" uid="uid://dqgi017m68jnc" path="res://assets/Dügme/Evbas.png" id="10_h4m8o"]
-[ext_resource type="Texture2D" uid="uid://bdkrk3q0lak0q" path="res://assets/Dügme/Solbas.png" id="11_h4m8o"]
-[ext_resource type="Texture2D" uid="uid://byugpdurxwekj" path="res://assets/Dügme/Yinelebas.png" id="12_frfis"]
-[ext_resource type="Texture2D" uid="uid://b87kw8ydyrccb" path="res://assets/Dügme/Sağ.png" id="12_uvjy0"]
-[ext_resource type="Texture2D" uid="uid://c0fntefiygwj0" path="res://assets/Dügme/Sağbas.png" id="13_frfis"]
-[ext_resource type="Texture2D" uid="uid://dpfyfvyvsouxk" path="res://assets/Dügme/Zıpla.png" id="14_jstdd"]
-[ext_resource type="Texture2D" uid="uid://bgg5me8nubb70" path="res://assets/Dügme/Zıplabas.png" id="15_sn4hj"]
+[ext_resource type="Texture2D" uid="uid://bn558bj25pmlr" path="res://assets/Skin/Ağaç.png" id="2_11w1s"]
+[ext_resource type="Texture2D" uid="uid://cf1dux4s0srgx" path="res://assets/2D/Çiçek/Çiçek1.png" id="3_d0gjl"]
+[ext_resource type="Texture2D" uid="uid://csddn2aa5im8i" path="res://assets/2D/Çiçek/Çiçek2.png" id="4_h4m8o"]
+[ext_resource type="Texture2D" uid="uid://d3ybejgevw8e1" path="res://assets/Dügme/Kamera.png" id="5_qvbwn"]
+[ext_resource type="Texture2D" uid="uid://c570lkvrkelgj" path="res://assets/2D/Çiçek/Çiçek3.png" id="5_uvjy0"]
+[ext_resource type="Texture2D" uid="uid://twhw7fb6r0ws" path="res://assets/2D/Çiçek/Çiçek4.png" id="6_frfis"]
+[ext_resource type="Texture2D" uid="uid://cimlfoj0x4mwx" path="res://assets/Dügme/İleri.png" id="7_ddl4y"]
+[ext_resource type="Texture2D" uid="uid://dxfbgn6glgoau" path="res://assets/2D/Çiçek/Çiçek5.png" id="7_jstdd"]
+[ext_resource type="Texture2D" uid="uid://dgmjq8wajn0qr" path="res://assets/Dügme/Geri.png" id="9_11w1s"]
+[ext_resource type="Texture2D" uid="uid://v8htybqwfqfb" path="res://assets/Dügme/Ev.png" id="10_h4m8o"]
+[ext_resource type="Texture2D" uid="uid://fqrmhjxhdn3f" path="res://assets/Dügme/Sol.png" id="11_h4m8o"]
+[ext_resource type="Texture2D" uid="uid://don568q25yttl" path="res://assets/Dügme/Yinele.png" id="12_frfis"]
+[ext_resource type="Texture2D" uid="uid://b87kw8ydyrccb" path="res://assets/Dügme/Sağ.png" id="13_frfis"]
+[ext_resource type="Texture2D" uid="uid://dpfyfvyvsouxk" path="res://assets/Dügme/Zıpla.png" id="15_sn4hj"]
 [ext_resource type="Texture2D" uid="uid://do3j6r5xmgil6" path="res://assets/Yemek/Pide.png" id="16_xnekm"]
 [ext_resource type="Texture2D" uid="uid://coinm8owsjp1j" path="res://assets/Hikaye/Mutlu???.png" id="18_4wvqa"]
 [ext_resource type="Texture2D" uid="uid://b8u3jy2epeyaq" path="res://assets/Hikaye/Mutlu.png" id="19_21vk2"]
 [ext_resource type="Texture2D" uid="uid://6fjmrrcfln5h" path="res://assets/Hikaye/Üzgün.png" id="20_mijv8"]
 [ext_resource type="Texture2D" uid="uid://dho64vc0awtpw" path="res://assets/Hikaye/Rekor.png" id="21_1bld7"]
-[ext_resource type="Texture2D" uid="uid://dm5focmld2j1l" path="res://assets/Yenküpceset.png" id="30_11w1s"]
+[ext_resource type="Texture2D" uid="uid://dkypycqxu3e8a" path="res://assets/Yenküpceset.png" id="30_11w1s"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_sn4hj"]
 rough = true
@@ -52,7 +44,7 @@ size = Vector3(1, 0.05, 1)
 [sub_resource type="AtlasTexture" id="AtlasTexture_w7vup"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4wvqa"]
-albedo_color = Color(2.7675182e-07, 0.2347391, 0.047848463, 1)
+albedo_color = Color(8.1822276e-07, 0.26762047, 0.05618368, 1)
 albedo_texture = ExtResource("1_2w4jd")
 metallic_specular = 0.0
 roughness_texture = SubResource("AtlasTexture_w7vup")
@@ -272,15 +264,13 @@ text = "-5"
 
 [node name="İleridüğme" type="TouchScreenButton" parent="UI"]
 position = Vector2(1, 938)
-scale = Vector2(0.25, 0.25)
-texture_normal = ExtResource("6_2u0lq")
+texture_normal = ExtResource("7_ddl4y")
 texture_pressed = ExtResource("7_ddl4y")
 action = "ui_up"
 
 [node name="Geridüğme" type="TouchScreenButton" parent="UI"]
 position = Vector2(1, 1069)
-scale = Vector2(0.25, 0.25)
-texture_normal = ExtResource("8_2w4jd")
+texture_normal = ExtResource("9_11w1s")
 texture_pressed = ExtResource("9_11w1s")
 action = "ui_down"
 
@@ -296,40 +286,34 @@ grow_vertical = 2
 
 [node name="EvDüğme" type="TouchScreenButton" parent="UI/Kontroller"]
 position = Vector2(-131, -600)
-scale = Vector2(0.25, 0.25)
-texture_normal = ExtResource("2_a27ie")
+texture_normal = ExtResource("10_h4m8o")
 texture_pressed = ExtResource("10_h4m8o")
 
 [node name="YineleDüğme" type="TouchScreenButton" parent="UI/Kontroller"]
 position = Vector2(-262, -600)
-scale = Vector2(0.25, 0.25)
-texture_normal = ExtResource("3_2nk0p")
+texture_normal = ExtResource("12_frfis")
 texture_pressed = ExtResource("12_frfis")
 
 [node name="KameraDüğme" type="TouchScreenButton" parent="UI/Kontroller"]
 position = Vector2(-394, -600)
-scale = Vector2(0.25, 0.25)
-texture_normal = ExtResource("4_jrmek")
+texture_normal = ExtResource("5_qvbwn")
 texture_pressed = ExtResource("5_qvbwn")
 
 [node name="ZıplaDüğme" type="TouchScreenButton" parent="UI/Kontroller"]
 position = Vector2(-265, 469)
-scale = Vector2(0.25, 0.25)
-texture_normal = ExtResource("14_jstdd")
+texture_normal = ExtResource("15_sn4hj")
 texture_pressed = ExtResource("15_sn4hj")
 action = "ui_jump"
 
 [node name="SolDüğme" type="TouchScreenButton" parent="UI/Kontroller"]
 position = Vector2(-397, 469)
-scale = Vector2(0.25, 0.25)
-texture_normal = ExtResource("10_d0gjl")
+texture_normal = ExtResource("11_h4m8o")
 texture_pressed = ExtResource("11_h4m8o")
 action = "rotate_left"
 
 [node name="SağDüğme" type="TouchScreenButton" parent="UI/Kontroller"]
 position = Vector2(-133, 469)
-scale = Vector2(0.25, 0.25)
-texture_normal = ExtResource("12_uvjy0")
+texture_normal = ExtResource("13_frfis")
 texture_pressed = ExtResource("13_frfis")
 action = "rotate_right"
 
@@ -337,30 +321,28 @@ action = "rotate_right"
 oversampling_override = 1.0
 initial_position = 1
 size = Vector2i(1800, 1150)
-visible = false
 
 [node name="MutluSon?" type="Sprite2D" parent="UI/SonPencere"]
-visible = false
 position = Vector2(899.99994, 575.0001)
-scale = Vector2(1.125, 0.95833355)
+scale = Vector2(3.5, 3.5)
 texture = ExtResource("18_4wvqa")
 
 [node name="MultuSon" type="Sprite2D" parent="UI/SonPencere"]
 visible = false
 position = Vector2(900, 550.5)
-scale = Vector2(1.125, 0.9175)
+scale = Vector2(3.5, 3.5)
 texture = ExtResource("19_21vk2")
 
 [node name="ÜzgünSon" type="Sprite2D" parent="UI/SonPencere"]
 visible = false
 position = Vector2(901.50006, 551.50006)
-scale = Vector2(1.123125, 0.91416675)
+scale = Vector2(3.5, 3.5)
 texture = ExtResource("20_mijv8")
 
 [node name="RekorSon" type="Sprite2D" parent="UI/SonPencere"]
 visible = false
 position = Vector2(899.9999, 549.99994)
-scale = Vector2(1.125, 0.91666657)
+scale = Vector2(3.5, 3.5)
 texture = ExtResource("21_1bld7")
 
 [node name="ÖlüMetin" type="Label" parent="UI"]

@@ -1,13 +1,13 @@
 extends CharacterBody2D
-var rotation_direction = 10
 var score = 0
 
-func _physics_process(_delta):
+func _physics_process(_unused):
 	velocity = transform.x * Input.get_axis("ui_down", "ui_up") * 350
 	move_and_slide()
 	
 	if Input.is_action_pressed("rotate_right"):
 		rotate(0.05)
+
 	if Input.is_action_pressed("rotate_left"):
 		rotate(-0.05)
 

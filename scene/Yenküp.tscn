@@ -1,7 +1,7 @@
 [gd_scene load_steps=44 format=3 uid="uid://cnmbdlwdet5lv"]
 
 [ext_resource type="Script" uid="uid://bhkevcuvty4ay" path="res://src/mainscene/main.gd" id="1_kflxq"]
-[ext_resource type="PackedScene" uid="uid://bn6bqmhm3c7g5" path="res://scene/United.tscn" id="2_bi7ml"]
+[ext_resource type="PackedScene" uid="uid://bn6bqmhm3c7g5" path="res://scene/Birleşik.tscn" id="2_bi7ml"]
 [ext_resource type="Script" uid="uid://cy44eks5dodxm" path="res://src/mainscene/yenküp.gd" id="3_bi7ml"]
 [ext_resource type="Script" uid="uid://d2nj7yxsmcxoj" path="res://src/mainscene/gizliyerküp.gd" id="6_bi7ml"]
 [ext_resource type="Texture2D" uid="uid://jr38i4cgayeh" path="res://assets/Dügme/Renk.png" id="22_kse5y"]
@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://11i6jbvv8b5j" path="res://assets/Yemek/Pogaca.png" id="36_bcol2"]
 [ext_resource type="Script" uid="uid://bpimmqhveqag6" path="res://src/mainscene/tank.gd" id="39_abthc"]
 [ext_resource type="Texture2D" uid="uid://b0hp2bpeu8cfc" path="res://assets/Diken.png" id="39_bcol2"]
-[ext_resource type="Texture2D" uid="uid://dosx6phg67v7b" path="res://assets/Skin/Kutu.png" id="39_us3vy"]
+[ext_resource type="Texture2D" uid="uid://bhsaqsl0nth33" path="res://assets/Skin/Kutu.png" id="39_us3vy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7o3c3"]
 
@@ -179,7 +179,7 @@ transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
 shape = SubResource("BoxShape3D_76ecl")
 
 [node name="Yüz" type="Sprite3D" parent="GizliYerküp"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, -0.509)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.509)
 texture = ExtResource("30_bjmox")
 
 [node name="Pide" type="Area3D" parent="."]

@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csddn2aa5im8i"
-path.s3tc="res://.godot/imported/Çiçek2.png-393862bdd5f593f80b00fb7f61211a98.s3tc.ctex"
-path.etc2="res://.godot/imported/Çiçek2.png-393862bdd5f593f80b00fb7f61211a98.etc2.ctex"
+uid="uid://bhsaqsl0nth33"
+path.s3tc="res://.godot/imported/Kutu.png-5c4f796ef4fcd07a569bc53344e6d228.s3tc.ctex"
+path.etc2="res://.godot/imported/Kutu.png-5c4f796ef4fcd07a569bc53344e6d228.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/2D/Çiçek/Çiçek2.png"
-dest_files=["res://.godot/imported/Çiçek2.png-393862bdd5f593f80b00fb7f61211a98.s3tc.ctex", "res://.godot/imported/Çiçek2.png-393862bdd5f593f80b00fb7f61211a98.etc2.ctex"]
+source_file="res://assets/Skin/Kutu.png"
+dest_files=["res://.godot/imported/Kutu.png-5c4f796ef4fcd07a569bc53344e6d228.s3tc.ctex", "res://.godot/imported/Kutu.png-5c4f796ef4fcd07a569bc53344e6d228.etc2.ctex"]
 
 [params]
 

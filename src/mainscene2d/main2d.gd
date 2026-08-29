@@ -9,7 +9,8 @@ func _ready() -> void:
 	$"TuglaDuvar/Ağaç3".position = Vector2(randi_range(100,4900),randi_range(0,2900))
 	$"GizliYerküp".position = Vector2(randi_range(100,4900),randi_range(0,2900))
 	$"Yenküp".position = Vector2(randi_range(100,4900),randi_range(0,2900))
-	$"Yenküp".rotate(randf_range(-90,90))
+	if $"GizliYerküp/CollisionShape2D2" == null:
+		$"Yenküp".rotate(randf_range(-90,90))
 
 func _process(delta: float) -> void:
 	$Path2D/PathFollow2D.progress += 5000 * delta
