@@ -71,6 +71,8 @@ Notices avaible at their own files.
 This platform / build tools have been compiled by HunoHuno833 (to avoid the EULA)
 and their contributions are under MIT.
 
+https://github.com/HomuHomu833/android-sdk-custom
+
 Copyright (c) 2025-2026 Lily Ross
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
