@@ -93,6 +93,19 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+These are also extracted from licenses directory at release and idk what they are supposed to be
+mostly likely nothing affective but i included them anyway…
+
+android-sdk-preview-license: 84831b9409646a918e30573bab4c9c91346d8abd
+android-googletv-license:601085b94cd77f0b54ff86406957099ebe79c4d6
+android-googlexr-license:ceff83576aac4f7f37cb98fe189e9fb3c49d3b81
+android-sdk-arm-dbt-license:859f317696f67ef3d7f30a50a5560e7834b43903
+android-sdk-license:24333f8a63b6825ea9c5514f83c2829b004d1fee
+google-gdk-license:33b6a2b64607f11b759f320ef9dff4ae5c47d97a
+mips-android-sysimage-license:e9acab5b5fbb560a72cfaecce8946896ff6aab9d
+
+
+
 _________________________
 Manual Patent grant;
 
