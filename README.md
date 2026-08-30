@@ -18,7 +18,12 @@ Redot 26.2 LTS
 
 OpenJDK yada android'de Godot (Android için)
 
-Android Platorm ve Build tools (Android için) Özgür Android Platform ve Build tools için https://github.com/HomuHomu833/android-sdk-custom
+Android Platorm ve Build tools (Android için)
+
+### APK İmzalaması
+Bozuk olduğu için, lütfen varsayılan imzalama işlemini kullanma. APK'yi imzalamak için şu komutu girmelisin. (Ad:OSVidYapan Şifre:111111)
+
+./apksigner sign -ks Yenküp.jks Yenküp.apk
 
 ### Lisans
 LICENSE klasörünü görün. Kısaca bu proje ek haklar ile CC0 lisansındadır ama bu üçüncü parti olan şeylere uygulamaz. 
@@ -41,7 +46,10 @@ Redot 26.2 LTS
 
 OpenJDK or Godot on Android (For Android)
 
-Android Platorm ve Build tools (For Android) for free licensed version https://github.com/HomuHomu833/android-sdk-custom
+Android Platorm ve Build tools (For Android)
+
+### APK Signing
+Because its broken, please do not use the built in signing system. This command will sign the apk manually.(Name: OSVidYapan Password: 111111)
 
 ./apksigner sign -ks Yenküp.jks Yenküp.apk 
 
