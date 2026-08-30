@@ -9,7 +9,7 @@ func _physics_process(delta):
 		rotate_y(0.025)
 	if Input.is_action_just_pressed("ui_jump") && is_on_floor():
 		velocity.y = 5
-
+	
 	velocity.x = direction.x * 10
 	velocity.z = direction.z * 10
 

@@ -321,8 +321,10 @@ action = "rotate_right"
 oversampling_override = 1.0
 initial_position = 1
 size = Vector2i(1800, 1150)
+visible = false
 
 [node name="MutluSon?" type="Sprite2D" parent="UI/SonPencere"]
+visible = false
 position = Vector2(899.99994, 575.0001)
 scale = Vector2(3.5, 3.5)
 texture = ExtResource("18_4wvqa")

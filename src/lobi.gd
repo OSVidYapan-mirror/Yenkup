@@ -2,7 +2,6 @@ extends Control
 var conf = ConfigFile.new()
 func _ready():
 	$"YenküpLevha".text = str(ProjectSettings.get_setting("application/config/name")) + " " + str(ProjectSettings.get_setting("application/config/version"))
-
 ##Dügmelerin basımı ve etkileri
 #Oyna
 func _on_oyna_düğme_released():

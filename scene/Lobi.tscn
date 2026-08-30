@@ -338,20 +338,14 @@ texture = ExtResource("5_6m5or")
 [node name="ÖğretenPencere" type="Window" parent="ÖğreticiDüğme"]
 oversampling_override = 1.0
 initial_position = 1
-size = Vector2i(1120, 700)
+size = Vector2i(1120, 650)
 visible = false
 
 [node name="ColorRect" type="ColorRect" parent="ÖğreticiDüğme/ÖğretenPencere"]
 z_index = -3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -563.0
-offset_top = -345.0
-offset_right = 562.0
-offset_bottom = 355.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.52998006, 0.7301781, 1, 1)
@@ -400,7 +394,8 @@ texture_pressed = ExtResource("5_ybqen")
 [node name="ENTutorial" type="AnimatedSprite2D" parent="ÖğreticiDüğme/ÖğretenPencere/ColorRect/Label/ENDüğme"]
 visible = false
 z_index = 2
-position = Vector2(214.28601, -133.57153)
+position = Vector2(200.00015, -116.42873)
+scale = Vector2(3.2057145, 3.0952375)
 sprite_frames = SubResource("SpriteFrames_aymb0")
 
 [node name="TRDüğme" type="TouchScreenButton" parent="ÖğreticiDüğme/ÖğretenPencere/ColorRect/Label"]
@@ -413,7 +408,8 @@ texture_pressed = ExtResource("5_ybqen")
 [node name="TRtutorial" type="AnimatedSprite2D" parent="ÖğreticiDüğme/ÖğretenPencere/ColorRect/Label/TRDüğme"]
 visible = false
 z_index = 2
-position = Vector2(-51.428528, -132.85712)
+position = Vector2(-64.28598, -115.71422)
+scale = Vector2(3.2, 3.0999997)
 sprite_frames = SubResource("SpriteFrames_ogn0d")
 
 [node name="ÖğreticiLevha" type="Label" parent="ÖğreticiDüğme"]
@@ -486,22 +482,22 @@ Kaybetmeden 50 pide ye"
 
 [node name="Mutlubaşarı?" type="Sprite2D" parent="HikayeDüğme/HikayePencere/Başarılar"]
 position = Vector2(825.00006, 82.000015)
-scale = Vector2(0.06875001, 0.056666654)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("37_3kp3y")
 
 [node name="Mutlubaşarı" type="Sprite2D" parent="HikayeDüğme/HikayePencere/Başarılar"]
-position = Vector2(823.2499, 156.62502)
-scale = Vector2(0.06718745, 0.06562501)
+position = Vector2(823.2499, 176.62502)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("38_rmba5")
 
 [node name="Üzgünbaşarı" type="Sprite2D" parent="HikayeDüğme/HikayePencere/Başarılar"]
-position = Vector2(823.25006, 232.50005)
-scale = Vector2(0.06843751, 0.06749993)
+position = Vector2(823.25006, 273.50006)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("39_a5k10")
 
 [node name="Rekorbaşarı" type="Sprite2D" parent="HikayeDüğme/HikayePencere/Başarılar"]
-position = Vector2(823.49994, 321.74997)
-scale = Vector2(0.07062506, 0.08041663)
+position = Vector2(823.49994, 384.74997)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("40_t03lv")
 
 [node name="HikayeBaşlat" type="TouchScreenButton" parent="HikayeDüğme/HikayePencere"]
@@ -521,7 +517,7 @@ text = "Hikayeyi   Gör"
 [node name="Hikaye" type="AnimatedSprite2D" parent="HikayeDüğme/HikayePencere/HikayeBaşlat"]
 visible = false
 position = Vector2(132, -200.00005)
-scale = Vector2(0.5555555, 0.49999985)
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_u4fnd")
 
 [node name="HikayeLevha" type="Label" parent="HikayeDüğme"]
@@ -557,9 +553,9 @@ size = Vector2i(1000, 500)
 visible = false
 
 [node name="MetinLevha" type="Label" parent="AyarlarDüğme/AyarlarPencere"]
-offset_left = 4.0
-offset_right = 254.0
-offset_bottom = 56.0
+offset_left = 3.0
+offset_right = 382.0
+offset_bottom = 266.0
 theme_override_font_sizes/font_size = 50
 text = "Renk:
 
@@ -568,89 +564,79 @@ Hava durumu:"
 
 [node name="Kırmızı" type="TouchScreenButton" parent="AyarlarDüğme/AyarlarPencere/MetinLevha"]
 modulate = Color(1, 0, 0, 1)
-position = Vector2(248.00008, 8)
-scale = Vector2(0.1, 0.1)
+position = Vector2(223.00008, 1)
 texture_normal = ExtResource("14_lwtly")
 texture_pressed = ExtResource("14_lwtly")
 
 [node name="Sarı" type="TouchScreenButton" parent="AyarlarDüğme/AyarlarPencere/MetinLevha"]
 modulate = Color(1, 1, 0, 1)
-position = Vector2(301.00006, 8)
-scale = Vector2(0.1, 0.1)
+position = Vector2(273.00006, 1)
 texture_normal = ExtResource("14_lwtly")
 texture_pressed = ExtResource("14_lwtly")
 
 [node name="Aqua" type="TouchScreenButton" parent="AyarlarDüğme/AyarlarPencere/MetinLevha"]
 modulate = Color(0, 1, 0.7647059, 1)
-position = Vector2(354.00006, 8)
-scale = Vector2(0.1, 0.1)
+position = Vector2(323.00006, 2)
 texture_normal = ExtResource("14_lwtly")
 texture_pressed = ExtResource("14_lwtly")
 
 [node name="Mavi" type="TouchScreenButton" parent="AyarlarDüğme/AyarlarPencere/MetinLevha"]
 modulate = Color(0, 0, 1, 1)
-position = Vector2(406.00006, 8)
-scale = Vector2(0.1, 0.1)
+position = Vector2(374.00006, 0)
 texture_normal = ExtResource("14_lwtly")
 texture_pressed = ExtResource("14_lwtly")
 
 [node name="Mor" type="TouchScreenButton" parent="AyarlarDüğme/AyarlarPencere/MetinLevha"]
 modulate = Color(0.50980395, 0, 1, 1)
-position = Vector2(248.00008, 58.999992)
-scale = Vector2(0.1, 0.1)
+position = Vector2(223.00008, 49.999992)
 texture_normal = ExtResource("14_lwtly")
 texture_pressed = ExtResource("14_lwtly")
 
 [node name="Siyah" type="TouchScreenButton" parent="AyarlarDüğme/AyarlarPencere/MetinLevha"]
 modulate = Color(0.2, 0.2, 0.2, 1)
-position = Vector2(301.00006, 59.000008)
-scale = Vector2(0.1, 0.1)
+position = Vector2(274.00006, 50.000008)
 texture_normal = ExtResource("14_lwtly")
 texture_pressed = ExtResource("14_lwtly")
 
 [node name="Kahverengi" type="TouchScreenButton" parent="AyarlarDüğme/AyarlarPencere/MetinLevha"]
 modulate = Color(0.49019608, 0.28627452, 0, 1)
-position = Vector2(354.00006, 60.000008)
-scale = Vector2(0.1, 0.1)
+position = Vector2(324.00006, 51.000008)
 texture_normal = ExtResource("14_lwtly")
 texture_pressed = ExtResource("14_lwtly")
 
 [node name="Zeytin" type="TouchScreenButton" parent="AyarlarDüğme/AyarlarPencere/MetinLevha"]
 modulate = Color(0.6, 0.6, 0, 1)
-position = Vector2(406.00006, 60.000008)
-scale = Vector2(0.1, 0.1)
+position = Vector2(375, 52.000008)
 texture_normal = ExtResource("14_lwtly")
 texture_pressed = ExtResource("14_lwtly")
 
 [node name="Gündüz" type="TouchScreenButton" parent="AyarlarDüğme/AyarlarPencere/MetinLevha"]
-position = Vector2(393.99994, 159.99997)
-scale = Vector2(0.15, 0.15)
+position = Vector2(382.99994, 159.99997)
 texture_normal = ExtResource("41_rjwph")
 texture_pressed = ExtResource("41_rjwph")
 
 [node name="Akşam" type="TouchScreenButton" parent="AyarlarDüğme/AyarlarPencere/MetinLevha"]
-position = Vector2(476.99997, 160.99997)
-scale = Vector2(0.15, 0.15)
+position = Vector2(483.99997, 160.99997)
 texture_normal = ExtResource("43_c0vbl")
 texture_pressed = ExtResource("43_c0vbl")
 
 [node name="Gece" type="TouchScreenButton" parent="AyarlarDüğme/AyarlarPencere/MetinLevha"]
-position = Vector2(561.9999, 159.99997)
-scale = Vector2(0.15, 0.15)
+position = Vector2(583.9999, 159.99997)
 texture_normal = ExtResource("45_6muml")
 texture_pressed = ExtResource("45_6muml")
 
 [node name="Bulutlu" type="TouchScreenButton" parent="AyarlarDüğme/AyarlarPencere/MetinLevha"]
-position = Vector2(646.9999, 159.99997)
-scale = Vector2(0.15, 0.15)
+position = Vector2(684.9999, 159.99997)
 texture_normal = ExtResource("47_nswh2")
 texture_pressed = ExtResource("47_nswh2")
 
 [node name="ColorRect" type="ColorRect" parent="AyarlarDüğme/AyarlarPencere"]
 z_index = -1
-offset_left = 1.0
-offset_right = 1001.0
-offset_bottom = 500.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.13333334, 0.13333334, 0.13333334, 1)
 
 [node name="AyarlarLevha" type="Label" parent="AyarlarDüğme"]
@@ -703,31 +689,34 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Atıflar" type="Label" parent="AtıfDüğme/AtıfPencere"]
-offset_left = -11.0
-offset_top = 16.0
-offset_right = 1479.0
-offset_bottom = 769.0
-theme_override_font_sizes/font_size = 30
-text = "Author:OSVidYapan
-My channel: https://www.youtube.com/@OSVidYapan
-______________________________________________
-Game engine;
-Made with Godot/Redot - Juan Linietsky & Ariel Manzur & Godot/Redot Contributors
-https://github.com/godotengine/godot/blob/master/AUTHORS.md
-https://godotengine.org/license/
-_______________________________________________________
-Main License
-CC0 1.0 with additional grants including ptent grant
-_________________________________________________________
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "THIS LIST IS NOT EXHAUSTIVE FULL COPYRIGHT NOTICES INCLUING LICENSE COPIES CAN BE FOUND AT;
+https://codeberg.org/OSVidYapan/Yenkup/src/branch/main/LICENSE
+__________________________
+Creator:OSVidYapan
+My Channel:https://www.youtube.com/@OSVidYapan
+___________________________________________________
+The game license:
+CC0 with additional grants including a patent grant
+______________________________________________________
 Font
-Yerpixel - OSVidYapan
- unlicense
-______________________________________________________________
+YerPixel - OSVidYapan | Unlicenses
+______________________________________________________
+Game engine;
+  
+Copyright (c) 2014-present the Redot
+ community, modified from an original work by Godot Engine contributors.
+Copyright (c) 2007-2014 Juan Linietsky, Ariel Manzur.
+____________________________________________________
 License links;
-https://creativecommons.org/public-domain/cc0/
-https://mit-license.org/
-___________________________________
-More info at: https://codeberg.org/OSVidYapan/Yenkup"
+https://github.com/openjdk/jdk?tab=GPL-2.0-1-ov-file
+https://creativecommons.org/publicdomain/zero/1.0/legalcode.en
+redotengine.org/license "
 horizontal_alignment = 1
 
 [node name="AtıfLevha" type="Label" parent="AtıfDüğme"]
