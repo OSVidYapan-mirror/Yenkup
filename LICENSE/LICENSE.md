@@ -54,7 +54,7 @@ Permission is hereby granted to you a perpetual, worldwide, non-exclusive, no-ch
 ___
 #### Other manual grants;
 
-Permission for sublicensing and trasfering the license is granted for any purpose irrevocably along the patent license as long as its permmitted under applicable law. (This only applies for jurisdictions that consider "Waiver" section on CC0 legal code invalid where the section "Public License Fallback" is required to be legally allowed to use the software.)
+Permission for sublicensing and trasfering the license is granted for any purpose irrevocably along the patent license as long as its permmitted under applicable law. (This only applies for jurisdictions that consider "Waiver" section on CC0 legal code is invalid where the section "Public License Fallback" is required to be legally allowed to use the software.)
 ___
 The patent grant has been derived from apache's patent grant for better clarification
 But this patent grant is NOT AFFILTIRATED with Apache IN ANY WAY
