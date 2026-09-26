@@ -9,7 +9,7 @@ Yaptığım ilk video oyunumun Godot/Redot'ta yeniden yazılmış hali.
 Bu oyunda sen şirin bir küpsün ve amacın pideleri yiyerek en yüksek skor'a ulaşmak. Daha fazlası için oyundaki öğreticiye tıkla.
 
 ### Yayınlamalar
-Codeberg'de sadece kaynak kodu yayınlanacaktır eğer derlenmiş yapıları istiyorsan itch.io linkini ziyaret edebilirsin.
+Github'da sadece kaynak kodu yayınlanacaktır eğer derlenmiş yapıları istiyorsan itch.io linkini ziyaret edebilirsin.
 
 Itch.io linki: [https://winfilmiyapan103.itch.io/yenkup](https://winfilmiyapan103.itch.io/yenkup)
 
@@ -37,7 +37,7 @@ My first video game rewritten in Godot/Redot.
 In this game you are a little cube and your goal is to eat the pides while escaping your enemies. See more on the game tutorial itself.
 
 ### Publishing
-In codeberg, only the source code will be released and the executables can be found at itch.io
+In github, only the source code will be released and the executables can be found at itch.io
 
 Itch.io link: https://winfilmiyapan103.itch.io/yenkup
 
