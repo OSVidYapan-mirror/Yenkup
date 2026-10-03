@@ -62,7 +62,7 @@ For more information about derived licenses from Apache;
 https://www.apache.org/foundation/license-faq.html#mod-license
 I just wanted to attribute because of copyights of a license document itself.
 ___
-### Font; Yerpixel - OSVidYapan URL:https://codeberg.org/OSVidYapan/ovTema (under same license of Yenküp's main license)
+### Font; Yerpixel - OSVidYapan URL:https://gthub.com/OSVidYapa-mirror/ovTema (under same license of Yenküp's main license)
 ___
 ### Sound Effects | Their respective authors that do not require attribution | CC0
 
@@ -86,7 +86,6 @@ will be also MIT licensed.
 
 Exhaustive copyright notices of the game engine (because of third party libraries) can be found at REDOT-COPYRIGHT.txt
 ___
-
 
 ### Build tools / Platform tools - Google LLC mainly Apache 2.0
 ### OpenJDK - Oracle GPLV2 classpath exception
@@ -128,4 +127,3 @@ mostly likely nothing affective but i included them anyway…
 - android-sdk-license:24333f8a63b6825ea9c5514f83c2829b004d1fee
 - google-gdk-license:33b6a2b64607f11b759f320ef9dff4ae5c47d97a
 - mips-android-sysimage-license:e9acab5b5fbb560a72cfaecce8946896ff6aab9d
-
