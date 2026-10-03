@@ -23,6 +23,7 @@ func _on_area_3d_area_entered(area: Area3D) -> void:
 			$"../Yüzey/UI/SonPencere".show()
 			$"../Yüzey/UI/SonPencere/ÜzgünSon".show()
 		self.queue_free()
+		$"../Yüzey/Ses".stop()
 	elif area.name == "Kardeş":
 		$"../Yüzey/UI/SonPencere".show()
 		$"../Yüzey/UI/SonPencere/MutluSon?".show()

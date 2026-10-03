@@ -87,6 +87,7 @@ func _on_bulutlu_released() -> void:
 func _on_karanlık_released() -> void:
 	conf.set_value("Gökyüzü","Renk", Color(0.2,0.2,0.2))
 	conf.save("user://Yenküp.conf")
+
 #Atıf
 func _on_atıf_düğme_released():
 	$AtıfDüğme/AtıfPencere.show()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://cx6gn86r3r10h"]
+[gd_scene load_steps=60 format=3 uid="uid://cx6gn86r3r10h"]
 
 [ext_resource type="Script" uid="uid://bhkevcuvty4ay" path="res://src/mainscene/main.gd" id="1_kflxq"]
 [ext_resource type="PackedScene" uid="uid://bn6bqmhm3c7g5" path="res://scene/Birleşik.tscn" id="2_wwwsa"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://d2nj7yxsmcxoj" path="res://src/mainscene/gizliyerküp.gd" id="9_wwwsa"]
 [ext_resource type="Texture2D" uid="uid://bfw8wblcumjm3" path="res://assets/Skin/KardeşYüz.png" id="12_kflxq"]
 [ext_resource type="Texture2D" uid="uid://bhsaqsl0nth33" path="res://assets/Skin/Kutu.png" id="16_a5ri5"]
+[ext_resource type="AudioStream" uid="uid://c1kw6dp8epghm" path="res://assets/Müzik/bang_01.ogg" id="19_wwwsa"]
 [ext_resource type="Texture2D" uid="uid://jr38i4cgayeh" path="res://assets/Dügme/Renk.png" id="22_kse5y"]
 [ext_resource type="Texture2D" uid="uid://lrvu5lhqtrip" path="res://assets/Skin/GizliYerküpYüz.png" id="30_bjmox"]
 [ext_resource type="Script" uid="uid://cy44eks5dodxm" path="res://src/mainscene/yenküp.gd" id="32_d23kq"]
@@ -124,47 +125,47 @@ metallic_texture = ExtResource("22_kse5y")
 [sub_resource type="BoxMesh" id="BoxMesh_h5klq"]
 material = SubResource("StandardMaterial3D_tq2wc")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_alssh"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a5ri5"]
 albedo_color = Color(0, 0.39215687, 0, 1)
 metallic = 0.67
 
-[sub_resource type="BoxMesh" id="BoxMesh_tq2wc"]
-material = SubResource("StandardMaterial3D_alssh")
+[sub_resource type="BoxMesh" id="BoxMesh_wwwsa"]
+material = SubResource("StandardMaterial3D_a5ri5")
 size = Vector3(2.5, 1, 5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h5klq"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fn42i"]
 albedo_color = Color(0, 0, 0, 1)
 albedo_texture_force_srgb = true
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_8dlqn"]
-material = SubResource("StandardMaterial3D_h5klq")
+[sub_resource type="CylinderMesh" id="CylinderMesh_poats"]
+material = SubResource("StandardMaterial3D_fn42i")
 height = 3.0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_4nrv4"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_7a5fl"]
 size = Vector3(2.4965515, 1, 4.8914185)
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_bcol2"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_qjf5k"]
 height = 1.0941772
 radius = 1.0791016
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bcol2"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rcky5"]
 albedo_color = Color(0, 0.5568628, 0, 1)
 metallic = 0.88
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_us3vy"]
-material = SubResource("StandardMaterial3D_bcol2")
+[sub_resource type="CylinderMesh" id="CylinderMesh_ql310"]
+material = SubResource("StandardMaterial3D_rcky5")
 top_radius = 1.0
 bottom_radius = 1.0
 height = 1.0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_us3vy"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jrlwj"]
 albedo_color = Color(0.6255971, 0.6255971, 0.6255971, 1)
-metallic = 0.91
+metallic = 0.85
 metallic_specular = 1.0
-roughness = 0.61
+roughness = 0.35
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_alssh"]
-material = SubResource("StandardMaterial3D_us3vy")
+[sub_resource type="CylinderMesh" id="CylinderMesh_ydxn6"]
+material = SubResource("StandardMaterial3D_jrlwj")
 top_radius = 0.3
 bottom_radius = 0.3
 
@@ -198,7 +199,7 @@ mesh = SubResource("TextMesh_45aoq")
 skeleton = NodePath("")
 
 [node name="Sprite3D" type="Sprite3D" parent="Ev"]
-transform = Transform3D(-2.1855695e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.1855695e-09, -0.5, -0.39, 0.15)
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711392e-08, -0.5, -0.39, 0.054071665)
 texture = ExtResource("6_w7vup")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Ev"]
@@ -463,72 +464,70 @@ shape = SubResource("BoxShape3D_tq2wc")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Kutu4"]
 mesh = SubResource("BoxMesh_h5klq")
 
+[node name="Timer" type="Timer" parent="."]
+process_mode = 3
+physics_interpolation_mode = 1
+process_callback = 0
+wait_time = 0.7
+autostart = true
+
 [node name="TankVücüt" type="CharacterBody3D" parent="." groups=["sınır", "tank"]]
 transform = Transform3D(0.09255992, 0, 0.79462737, 0, 0.8, 0, -0.79462737, 0, 0.09255992, 0, 0, 0)
 
 [node name="TankMesh" type="MeshInstance3D" parent="TankVücüt" groups=["tank"]]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 1.1920929e-07, 0, 0)
-mesh = SubResource("BoxMesh_tq2wc")
+mesh = SubResource("BoxMesh_wwwsa")
 skeleton = NodePath("../..")
 
 [node name="Tekerlek1" type="MeshInstance3D" parent="TankVücüt/TankMesh" groups=["tank"]]
 transform = Transform3D(-4.371141e-08, -1.0000006, -7.450581e-09, 1, -4.3711395e-08, -2.646978e-23, 0, -7.450581e-09, 1.0000006, 1.4901147e-08, 0, 2.124)
-mesh = SubResource("CylinderMesh_8dlqn")
+mesh = SubResource("CylinderMesh_poats")
 
 [node name="Tekerlek2" type="MeshInstance3D" parent="TankVücüt/TankMesh" groups=["tank"]]
 transform = Transform3D(-4.3711438e-08, -1.0000015, -7.450581e-09, 1.0000007, -4.371141e-08, 0, -4.440892e-16, -1.4901161e-08, 1.0000017, 2.3841858e-07, -0.024, 0.9660001)
-mesh = SubResource("CylinderMesh_8dlqn")
+mesh = SubResource("CylinderMesh_poats")
 skeleton = NodePath("../Tekerlek1")
 
 [node name="Tekerlek3" type="MeshInstance3D" parent="TankVücüt/TankMesh" groups=["tank"]]
 transform = Transform3D(-4.3711427e-08, -1.000001, -1.4901161e-08, 1.0000006, -4.371141e-08, 0, 0, 0, 1.0000015, 0, -0.024, -1.265)
-mesh = SubResource("CylinderMesh_8dlqn")
+mesh = SubResource("CylinderMesh_poats")
 skeleton = NodePath("../Tekerlek1")
 
 [node name="Tekerlek4" type="MeshInstance3D" parent="TankVücüt/TankMesh" groups=["tank"]]
 transform = Transform3D(-4.3711424e-08, -1.000001, -1.4901161e-08, 1.0000007, -4.371141e-08, 0, -8.881784e-16, 0, 1.0000015, 0, -0.024, 0)
-mesh = SubResource("CylinderMesh_8dlqn")
+mesh = SubResource("CylinderMesh_poats")
 skeleton = NodePath("../Tekerlek1")
 
 [node name="Tekerlek5" type="MeshInstance3D" parent="TankVücüt/TankMesh" groups=["tank"]]
 transform = Transform3D(-4.3711424e-08, -1.0000008, -1.4901161e-08, 1.0000007, -4.3711417e-08, 0, 0, -7.450581e-09, 1.0000015, 0.016631365, -0.024000002, -2.2908738)
-mesh = SubResource("CylinderMesh_8dlqn")
+mesh = SubResource("CylinderMesh_poats")
 skeleton = NodePath("../Tekerlek1")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TankVücüt" groups=["tank"]]
 transform = Transform3D(0.9999927, 0, -6.7055225e-08, 0, 1, 0, 6.7055225e-08, 0, 0.9999927, 0.01286304, 0, 0.011134863)
-shape = SubResource("BoxShape3D_4nrv4")
+shape = SubResource("BoxShape3D_7a5fl")
 
 [node name="TankKafa" type="CharacterBody3D" parent="TankVücüt" groups=["sınır", "tank"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9073486e-06, 1, 1.5000002)
+transform = Transform3D(0.9999999, 0, 2.2351742e-08, 0, 0.9999998, 0, -2.2351742e-08, 0, 0.9999999, 1.937151e-06, 0.76553994, 1.4999999)
 script = ExtResource("39_abthc")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="TankVücüt/TankKafa" groups=["tank"]]
-shape = SubResource("CylinderShape3D_bcol2")
+[node name="Kafasertliği" type="CollisionShape3D" parent="TankVücüt/TankKafa" groups=["tank"]]
+shape = SubResource("CylinderShape3D_qjf5k")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="TankVücüt/TankKafa" groups=["tank"]]
+[node name="Kafa" type="MeshInstance3D" parent="TankVücüt/TankKafa" groups=["tank"]]
 transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 0, 0, 0)
-mesh = SubResource("CylinderMesh_us3vy")
+mesh = SubResource("CylinderMesh_ql310")
 skeleton = NodePath("../../..")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="TankVücüt/TankKafa/MeshInstance3D" groups=["tank"]]
+[node name="Burun" type="MeshInstance3D" parent="TankVücüt/TankKafa/Kafa" groups=["tank"]]
 transform = Transform3D(-3.090862e-08, -0.70710677, -0.7071068, 1, -4.371139e-08, 0, -3.090862e-08, -0.70710677, 0.7071068, -1, 0, -1)
-mesh = SubResource("CylinderMesh_alssh")
+mesh = SubResource("CylinderMesh_ydxn6")
 skeleton = NodePath("../../../..")
 
-[node name="RayCast3D" type="RayCast3D" parent="TankVücüt/TankKafa" groups=["tank"]]
-transform = Transform3D(-0.99975336, 0, 0.022219494, 0, 1.0000002, 0, -0.022219494, 0, -0.99975336, 0, 0, 2.5000002)
-rotation_edit_mode = 1
-target_position = Vector3(0, -1, -90)
-
-[node name="Timer" type="Timer" parent="."]
-process_mode = 3
-physics_interpolation_mode = 1
-process_callback = 0
-autostart = true
+[node name="TankSes" type="AudioStreamPlayer3D" parent="TankVücüt/TankKafa"]
+stream = ExtResource("19_wwwsa")
 
 [connection signal="area_entered" from="Yenküp/Area3D" to="Yenküp" method="_on_area_3d_area_entered"]
-[connection signal="body_entered" from="Yenküp/Area3D" to="Yenküp" method="_on_area_3d_body_entered"]
 [connection signal="area_entered" from="GizliYerküp/Area3D" to="GizliYerküp" method="_on_area_3d_area_entered"]
 [connection signal="body_entered" from="Pide" to="Pide" method="_on_body_entered"]
 [connection signal="body_entered" from="Pide2" to="Pide2" method="_on_body_entered"]
@@ -542,3 +541,4 @@ autostart = true
 [connection signal="body_entered" from="C45" to="C45" method="_on_body_entered"]
 [connection signal="body_entered" from="C46" to="C46" method="_on_body_entered"]
 [connection signal="body_entered" from="C47" to="C47" method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="TankVücüt/TankKafa" method="_on_timer_timeout"]

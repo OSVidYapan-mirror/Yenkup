@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs6pllv0kg0fn"
-path="res://.godot/imported/GizliYerküpYüz.webp-8d3903b0027d0616b83d12bdc27af7b7.ctex"
+uid="uid://gkm0r7e1idea"
+path="res://.godot/imported/Müzik.png-3747666b1e1451479628685422311dd2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Skin/GizliYerküpYüz.webp"
-dest_files=["res://.godot/imported/GizliYerküpYüz.webp-8d3903b0027d0616b83d12bdc27af7b7.ctex"]
+source_file="res://assets/Dügme/Müzik.png"
+dest_files=["res://.godot/imported/Müzik.png-3747666b1e1451479628685422311dd2.ctex"]
 
 [params]
 

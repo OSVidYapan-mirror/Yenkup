@@ -293,7 +293,6 @@ shape = SubResource("BoxShape3D_tq2wc")
 mesh = SubResource("BoxMesh_h5klq")
 
 [connection signal="area_entered" from="Yenküp/Area3D" to="Yenküp" method="_on_area_3d_area_entered"]
-[connection signal="body_entered" from="Yenküp/Area3D" to="Yenküp" method="_on_area_3d_body_entered"]
 [connection signal="area_entered" from="GizliYerküp/Area3D" to="GizliYerküp" method="_on_area_3d_area_entered"]
 [connection signal="body_entered" from="Pide" to="Pide" method="_on_body_entered"]
 [connection signal="body_entered" from="Pide2" to="Pide2" method="_on_body_entered"]

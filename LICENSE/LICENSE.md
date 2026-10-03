@@ -64,6 +64,11 @@ I just wanted to attribute because of copyights of a license document itself.
 ___
 ### Font; Yerpixel - OSVidYapan URL:https://codeberg.org/OSVidYapan/ovTema (under same license of Yenküp's main license)
 ___
+### Sound Effects | Their respective authors that do not require attribution | CC0
+
+1. https://opengameart.org/content/25-cc0-bang-firework-sfx
+2. https://opengameart.org/content/going-deep
+___
 ### Game engine
 
 Copyright (c) 2014-present Godot/Redot Engine contributors (see AUTHORS.md). Copyright (c) 2007-2014 Juan Linietsky, Ariel Manzur.

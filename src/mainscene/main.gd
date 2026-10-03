@@ -7,7 +7,7 @@ func _ready():
 	conf.set_value("Gökyüzü","Renk", Color(0.5,0.7,1))
 	conf.load("user://Yenküp.conf")
 	$Yenküp/MeshInstance3D.mesh.material.albedo_color = conf.get_value("Yenküp","Renk")
-	$"Yüzey/WorldEnvironment".environment.background_color = conf.get_value("Gökyüzü","Renk")
+	$"Yüzey/Gökyüzü".environment.background_color = conf.get_value("Gökyüzü","Renk")
 #Rasgeleme
 	$Yenküp.position=Vector3(randi_range(-55,55), (0), randi_range(-49,49))
 	$Yenküp.rotate_y(randi_range(0, 1))
@@ -31,12 +31,12 @@ func _ready():
 		$C47.position=Vector3(randi_range(-49,49), (-0.99), randi_range(-49,49))
 		$Kutu4.position=Vector3(randi_range(-49,49), (-0.99), randi_range(-49,49))
 #Hava durumları
-	if $"Yüzey/WorldEnvironment".environment.background_color == Color(0.2,0.4,0.5):
-		$"Yüzey/WorldEnvironment/DirectionalLight3D".light_energy = 1.5
-	if $"Yüzey/WorldEnvironment".environment.background_color == Color(0.7,0.7,0.7):
-		$"Yüzey/WorldEnvironment/DirectionalLight3D".light_energy = 1
-	if $"Yüzey/WorldEnvironment".environment.background_color == Color(0,0.05,0.2):
-		$"Yüzey/WorldEnvironment/DirectionalLight3D".light_energy = 0.3
+	if $"Yüzey/Gökyüzü".environment.background_color == Color(0.2,0.4,0.5):
+		$"Yüzey/Gökyüzü/Işık".light_energy = 1.5
+	if $"Yüzey/Gökyüzü".environment.background_color == Color(0.7,0.7,0.7):
+		$"Yüzey/Gökyüzü/Işık".light_energy = 1
+	if $"Yüzey/Gökyüzü".environment.background_color == Color(0,0.05,0.2):
+		$"Yüzey/Gökyüzü/Işık".light_energy = 0.3
 func _physics_process(delta: float):
 	$Path3D/PathFollow3D.progress += 200 * delta
 	if not $Path3D2/PathFollow3D == null:

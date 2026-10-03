@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://bn6bqmhm3c7g5"]
+[gd_scene load_steps=57 format=3 uid="uid://bn6bqmhm3c7g5"]
 
 [ext_resource type="Texture2D" uid="uid://crpt2ludp7d8y" path="res://assets/Skin/Çim.png" id="1_2w4jd"]
 [ext_resource type="Script" uid="uid://dkdxy3r50pray" path="res://src/ui.gd" id="1_ajxsv"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://b8u3jy2epeyaq" path="res://assets/Hikaye/Mutlu.png" id="19_21vk2"]
 [ext_resource type="Texture2D" uid="uid://6fjmrrcfln5h" path="res://assets/Hikaye/Üzgün.png" id="20_mijv8"]
 [ext_resource type="Texture2D" uid="uid://dho64vc0awtpw" path="res://assets/Hikaye/Rekor.png" id="21_1bld7"]
+[ext_resource type="AudioStream" uid="uid://dkhlof4hp3jfj" path="res://assets/Müzik/S31-Going Deep.ogg" id="23_5mndv"]
 [ext_resource type="Texture2D" uid="uid://dkypycqxu3e8a" path="res://assets/Yenküpceset.png" id="30_11w1s"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_sn4hj"]
@@ -49,17 +50,15 @@ albedo_texture = ExtResource("1_2w4jd")
 metallic_specular = 0.0
 roughness_texture = SubResource("AtlasTexture_w7vup")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_21vk2"]
-size = Vector3(1, 4.756134, 1)
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_m1nag"]
+height = 2.1914063
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tnm7o"]
-albedo_color = Color(0.3906024, 0.19885457, 0, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5mndv"]
+albedo_color = Color(0.1882353, 0.10980392, 0, 1)
 albedo_texture = ExtResource("2_11w1s")
 
-[sub_resource type="BoxMesh" id="BoxMesh_mijv8"]
-material = SubResource("StandardMaterial3D_tnm7o")
-uv2_padding = 0.0
-size = Vector3(1, 3, 1)
+[sub_resource type="CylinderMesh" id="CylinderMesh_r4guc"]
+material = SubResource("StandardMaterial3D_5mndv")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lxsi4"]
 albedo_color = Color(0, 0.43137255, 0, 1)
@@ -70,6 +69,15 @@ metallic_texture = ExtResource("1_2w4jd")
 [sub_resource type="SphereMesh" id="SphereMesh_1bld7"]
 material = SubResource("StandardMaterial3D_lxsi4")
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_7runp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kc8c3"]
+albedo_color = Color(0.2, 0.10980392, 0, 1)
+albedo_texture = ExtResource("2_11w1s")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_8ecnp"]
+material = SubResource("StandardMaterial3D_kc8c3")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cayyl"]
 albedo_color = Color(0, 0.36078432, 0, 1)
 albedo_texture = ExtResource("1_2w4jd")
@@ -77,12 +85,31 @@ albedo_texture = ExtResource("1_2w4jd")
 [sub_resource type="PrismMesh" id="PrismMesh_dsbqp"]
 material = SubResource("StandardMaterial3D_cayyl")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_21vk2"]
+size = Vector3(1, 4.756134, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3wmdk"]
+albedo_color = Color(0.2, 0.10980392, 0, 1)
+albedo_texture = ExtResource("2_11w1s")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_bup8t"]
+material = SubResource("StandardMaterial3D_3wmdk")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w22y4"]
 albedo_color = Color(0.003921569, 0.29803923, 0, 1)
 albedo_texture = ExtResource("1_2w4jd")
 
 [sub_resource type="BoxMesh" id="BoxMesh_lf80w"]
 material = SubResource("StandardMaterial3D_w22y4")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_8f1an"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wcd63"]
+albedo_color = Color(0.2, 0.10980392, 0, 1)
+albedo_texture = ExtResource("2_11w1s")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_tynd6"]
+material = SubResource("StandardMaterial3D_wcd63")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kse5y"]
 albedo_color = Color(0, 0.31764707, 0, 1)
@@ -92,6 +119,13 @@ albedo_texture = ExtResource("1_2w4jd")
 material = SubResource("StandardMaterial3D_kse5y")
 top_radius = 0.0
 height = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gmsaf"]
+albedo_color = Color(0.2, 0.10980392, 0, 1)
+albedo_texture = ExtResource("2_11w1s")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_7rvkv"]
+material = SubResource("StandardMaterial3D_gmsaf")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4nrv4"]
 albedo_color = Color(0, 0.343687, 0, 1)
@@ -109,37 +143,46 @@ size = Vector3(0.063964844, 0.16357422, 1)
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
 physics_material_override = SubResource("PhysicsMaterial_sn4hj")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="Gökyüzü" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_2w4jd")
 camera_attributes = SubResource("CameraAttributesPhysical_11w1s")
 compositor = SubResource("Compositor_d0gjl")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+[node name="Yansama" type="DirectionalLight3D" parent="Gökyüzü"]
+transform = Transform3D(-0.6691307, 0, -0.7431448, 0, 1, 0, 0.7431448, 0, -0.6691307, 64.16871, 12.51506, -0.67858887)
+light_energy = 0.05
+light_indirect_energy = 0.02
+light_angular_distance = 52.06
+shadow_enabled = true
+shadow_opacity = 0.2
+shadow_blur = 0.429
+
+[node name="Işık" type="DirectionalLight3D" parent="Gökyüzü"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 33.799232, -2.7436829)
-light_energy = 2.0
-light_indirect_energy = 3.2
+light_energy = 3.0
+light_indirect_energy = 3.514
 light_angular_distance = 59.14
 shadow_enabled = true
 shadow_opacity = 0.2
 shadow_blur = 0.429
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="YüzeyPlatform" type="CollisionShape3D" parent="."]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0.007329643, 0)
 shape = SubResource("BoxShape3D_2w4jd")
 
 [node name="Yüzeygörünüm" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.00047689438, 6.540299e-05, 0.0006946945)
 mesh = SubResource("BoxMesh_2w4jd")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_4wvqa")
 
 [node name="Ağaç1" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0.05, 0.03)
-shape = SubResource("BoxShape3D_21vk2")
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0.05, 0)
+shape = SubResource("CylinderShape3D_m1nag")
 
 [node name="Tahta" type="MeshInstance3D" parent="Ağaç1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07900047, -0.9051889, 0)
-mesh = SubResource("BoxMesh_mijv8")
+mesh = SubResource("CylinderMesh_r4guc")
 skeleton = NodePath("")
 
 [node name="Yaprak" type="MeshInstance3D" parent="Ağaç1"]
@@ -148,40 +191,40 @@ mesh = SubResource("SphereMesh_1bld7")
 skeleton = NodePath("../Tahta")
 
 [node name="Ağaç2" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0.05, 0.03)
-shape = SubResource("BoxShape3D_21vk2")
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0.05, 0)
+shape = SubResource("CylinderShape3D_7runp")
 
 [node name="Tahta" type="MeshInstance3D" parent="Ağaç2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07900047, -0.9051888, 0)
-mesh = SubResource("BoxMesh_mijv8")
+mesh = SubResource("CylinderMesh_8ecnp")
 skeleton = NodePath("")
 
 [node name="Yaprak" type="MeshInstance3D" parent="Ağaç2"]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.07900047, 0.9898608, 0)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.99, 0)
 mesh = SubResource("PrismMesh_dsbqp")
 skeleton = NodePath("../Tahta")
 
 [node name="Ağaç3" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0.05, 0.03)
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0.05, 0)
 shape = SubResource("BoxShape3D_21vk2")
 
 [node name="Tahta" type="MeshInstance3D" parent="Ağaç3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07900238, -0.9051888, 0)
-mesh = SubResource("BoxMesh_mijv8")
+mesh = SubResource("CylinderMesh_bup8t")
 skeleton = NodePath("")
 
 [node name="Yaprak" type="MeshInstance3D" parent="Ağaç3"]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.07900238, 0.9898608, 0)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 1, 0)
 mesh = SubResource("BoxMesh_lf80w")
 skeleton = NodePath("../Tahta")
 
 [node name="Ağaç4" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0.05, 0.03)
-shape = SubResource("BoxShape3D_21vk2")
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0.05, 0)
+shape = SubResource("CylinderShape3D_8f1an")
 
 [node name="Tahta" type="MeshInstance3D" parent="Ağaç4"]
 transform = Transform3D(0.9994646, 0, 0.032719083, 0, 1, 0, -0.032719083, 0, 0.9994646, 0.078998566, -0.905, 0)
-mesh = SubResource("BoxMesh_mijv8")
+mesh = SubResource("CylinderMesh_tynd6")
 skeleton = NodePath("")
 
 [node name="Yaprak" type="MeshInstance3D" parent="Ağaç4"]
@@ -195,7 +238,7 @@ shape = SubResource("BoxShape3D_21vk2")
 
 [node name="Tahta" type="MeshInstance3D" parent="Ağaç5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07900238, -0.9051888, 0)
-mesh = SubResource("BoxMesh_mijv8")
+mesh = SubResource("CylinderMesh_7rvkv")
 skeleton = NodePath("")
 
 [node name="Yaprak" type="MeshInstance3D" parent="Ağaç5"]
@@ -223,22 +266,22 @@ texture = ExtResource("6_frfis")
 transform = Transform3D(0.001, 0, 0, 0, -4.371139e-11, 0.001, 0, -0.001, -4.371139e-11, -0.14258884, 0.4951, 0.4321319)
 texture = ExtResource("7_jstdd")
 
-[node name="Sınır1" type="CollisionShape3D" parent="."]
+[node name="Sınır1" type="CollisionShape3D" parent="." groups=["sınır"]]
 transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, -0.6414522, 0, 0.001)
 shape = SubResource("BoxShape3D_11w1s")
 debug_color = Color(0, 0, 0, 1)
 
-[node name="Sınır2" type="CollisionShape3D" parent="."]
+[node name="Sınır2" type="CollisionShape3D" parent="." groups=["sınır"]]
 transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0.63922465, 0, 0.0023)
 shape = SubResource("BoxShape3D_11w1s")
 debug_color = Color(0, 0, 0, 1)
 
-[node name="Sınır3" type="CollisionShape3D" parent="."]
+[node name="Sınır3" type="CollisionShape3D" parent="." groups=["sınır"]]
 transform = Transform3D(-5.6824796e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.6824796e-08, 0.04909046, 0, 0.6380592)
 shape = SubResource("BoxShape3D_11w1s")
 debug_color = Color(0, 0, 0, 1)
 
-[node name="Sınır4" type="CollisionShape3D" parent="."]
+[node name="Sınır4" type="CollisionShape3D" parent="." groups=["sınır"]]
 transform = Transform3D(-5.6824796e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.6824796e-08, 0.04909046, 0, -0.6279544)
 shape = SubResource("BoxShape3D_11w1s")
 debug_color = Color(0, 0, 0, 1)
@@ -367,6 +410,10 @@ text = "Öldün X( Tekrar Dene???"
 position = Vector2(697, -248)
 scale = Vector2(6.421875, 6.3828125)
 texture = ExtResource("30_11w1s")
+
+[node name="Ses" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("23_5mndv")
+autoplay = true
 
 [connection signal="released" from="UI/Kontroller/EvDüğme" to="UI" method="_on_ev_düğme_released"]
 [connection signal="released" from="UI/Kontroller/YineleDüğme" to="UI" method="_on_yinele_düğme_released"]
