@@ -201,7 +201,7 @@ position = Vector2(113, -75)
 scale = Vector2(0.452, 0.452)
 texture = ExtResource("8_ll65y")
 
-[node name="NormalMetin" type="Label" parent="OynaDüğme/OyunModu/Klasik"]
+[node name="KlasikMetin" type="Label" parent="OynaDüğme/OyunModu/Klasik"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -279,7 +279,7 @@ position = Vector2(113, -75)
 scale = Vector2(0.452, 0.452)
 texture = ExtResource("9_y5d64")
 
-[node name="Label" type="Label" parent="OynaDüğme/OyunModu/2Boyut"]
+[node name="2BoyutMetin" type="Label" parent="OynaDüğme/OyunModu/2Boyut"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -341,7 +341,7 @@ initial_position = 1
 size = Vector2i(1120, 650)
 visible = false
 
-[node name="ColorRect" type="ColorRect" parent="ÖğreticiDüğme/ÖğretenPencere"]
+[node name="Arkaplan" type="ColorRect" parent="ÖğreticiDüğme/ÖğretenPencere"]
 z_index = -3
 anchors_preset = 15
 anchor_right = 1.0
@@ -350,7 +350,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.52998006, 0.7301781, 1, 1)
 
-[node name="Label" type="Label" parent="ÖğreticiDüğme/ÖğretenPencere/ColorRect"]
+[node name="Dilseç" type="Label" parent="ÖğreticiDüğme/ÖğretenPencere/Arkaplan"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -367,7 +367,7 @@ theme_override_font_sizes/font_size = 32
 text = "Select your Language 
 (other languages removed due to AI ban)"
 
-[node name="LabelLT" type="Label" parent="ÖğreticiDüğme/ÖğretenPencere/ColorRect/Label"]
+[node name="ÖğreticiMeti" type="Label" parent="ÖğreticiDüğme/ÖğretenPencere/Arkaplan/Dilseç"]
 z_index = 1
 layout_mode = 1
 anchors_preset = 8
@@ -384,28 +384,28 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 32
 text = "English   Türkçe"
 
-[node name="ENDüğme" type="TouchScreenButton" parent="ÖğreticiDüğme/ÖğretenPencere/ColorRect/Label"]
+[node name="ENDüğme" type="TouchScreenButton" parent="ÖğreticiDüğme/ÖğretenPencere/Arkaplan/Dilseç"]
 self_modulate = Color(0, 0, 1, 1)
 position = Vector2(234.99991, 175.00006)
 scale = Vector2(0.7, 0.7)
 texture_normal = ExtResource("5_ybqen")
 texture_pressed = ExtResource("5_ybqen")
 
-[node name="ENTutorial" type="AnimatedSprite2D" parent="ÖğreticiDüğme/ÖğretenPencere/ColorRect/Label/ENDüğme"]
+[node name="ENTutorial" type="AnimatedSprite2D" parent="ÖğreticiDüğme/ÖğretenPencere/Arkaplan/Dilseç/ENDüğme"]
 visible = false
 z_index = 2
 position = Vector2(200.00015, -116.42873)
 scale = Vector2(3.2057145, 3.0952375)
 sprite_frames = SubResource("SpriteFrames_aymb0")
 
-[node name="TRDüğme" type="TouchScreenButton" parent="ÖğreticiDüğme/ÖğretenPencere/ColorRect/Label"]
+[node name="TRDüğme" type="TouchScreenButton" parent="ÖğreticiDüğme/ÖğretenPencere/Arkaplan/Dilseç"]
 self_modulate = Color(1, 0, 0, 1)
 position = Vector2(421.00006, 174.99994)
 scale = Vector2(0.7, 0.7)
 texture_normal = ExtResource("5_ybqen")
 texture_pressed = ExtResource("5_ybqen")
 
-[node name="TRtutorial" type="AnimatedSprite2D" parent="ÖğreticiDüğme/ÖğretenPencere/ColorRect/Label/TRDüğme"]
+[node name="TRtutorial" type="AnimatedSprite2D" parent="ÖğreticiDüğme/ÖğretenPencere/Arkaplan/Dilseç/TRDüğme"]
 visible = false
 z_index = 2
 position = Vector2(-64.28598, -115.71422)
@@ -444,7 +444,7 @@ initial_position = 1
 size = Vector2i(1000, 600)
 visible = false
 
-[node name="ColorRect" type="ColorRect" parent="HikayeDüğme/HikayePencere"]
+[node name="Arkaplan" type="ColorRect" parent="HikayeDüğme/HikayePencere"]
 offset_right = 1000.0
 offset_bottom = 600.0
 color = Color(0.33333334, 0.33333334, 0, 1)
@@ -630,7 +630,7 @@ position = Vector2(684.9999, 159.99997)
 texture_normal = ExtResource("47_nswh2")
 texture_pressed = ExtResource("47_nswh2")
 
-[node name="ColorRect" type="ColorRect" parent="AyarlarDüğme/AyarlarPencere"]
+[node name="Arkaplan" type="ColorRect" parent="AyarlarDüğme/AyarlarPencere"]
 z_index = -1
 anchors_preset = 15
 anchor_right = 1.0
@@ -661,7 +661,7 @@ scale = Vector2(0.98, 0.99)
 texture_normal = ExtResource("5_ybqen")
 texture_pressed = ExtResource("5_ybqen")
 
-[node name="KreditResim" type="Sprite2D" parent="AtıfDüğme"]
+[node name="AtıfResim" type="Sprite2D" parent="AtıfDüğme"]
 position = Vector2(113.26526, -84.34338)
 scale = Vector2(0.452, 0.452)
 texture = ExtResource("16_jt2kh")
@@ -740,7 +740,7 @@ position = Vector2(1414, 681)
 texture_normal = ExtResource("5_ybqen")
 texture_pressed = ExtResource("5_ybqen")
 
-[node name="Çık" type="Sprite2D" parent="ÇıkDüğme"]
+[node name="ÇıkResim" type="Sprite2D" parent="ÇıkDüğme"]
 position = Vector2(113, -82)
 scale = Vector2(0.452, 0.452)
 texture = ExtResource("17_1jhi3")
@@ -768,8 +768,8 @@ text = "Çık"
 [connection signal="released" from="OynaDüğme/OyunModu/2Boyut" to="." method="_on_orjinal_released"]
 [connection signal="released" from="ÖğreticiDüğme" to="." method="_on_öğretici_düğme_released"]
 [connection signal="close_requested" from="ÖğreticiDüğme/ÖğretenPencere" to="." method="_on_öğreten_pencere_close_requested"]
-[connection signal="released" from="ÖğreticiDüğme/ÖğretenPencere/ColorRect/Label/ENDüğme" to="." method="_on_en_düğme_released"]
-[connection signal="released" from="ÖğreticiDüğme/ÖğretenPencere/ColorRect/Label/TRDüğme" to="." method="_on_tr_düğme_released"]
+[connection signal="released" from="ÖğreticiDüğme/ÖğretenPencere/Arkaplan/Dilseç/ENDüğme" to="." method="_on_en_düğme_released"]
+[connection signal="released" from="ÖğreticiDüğme/ÖğretenPencere/Arkaplan/Dilseç/TRDüğme" to="." method="_on_tr_düğme_released"]
 [connection signal="released" from="HikayeDüğme" to="." method="_on_hikaye_düğme_released"]
 [connection signal="close_requested" from="HikayeDüğme/HikayePencere" to="." method="_on_hikaye_pencere_close_requested"]
 [connection signal="released" from="HikayeDüğme/HikayePencere/HikayeBaşlat" to="." method="_on_hikaye_başlat_released"]

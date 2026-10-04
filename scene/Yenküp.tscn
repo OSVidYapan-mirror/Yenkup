@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://cnmbdlwdet5lv"]
+[gd_scene load_steps=48 format=3 uid="uid://cnmbdlwdet5lv"]
 
 [ext_resource type="Script" uid="uid://bhkevcuvty4ay" path="res://src/mainscene/main.gd" id="1_kflxq"]
 [ext_resource type="PackedScene" uid="uid://bn6bqmhm3c7g5" path="res://scene/Birleşik.tscn" id="2_bi7ml"]
@@ -69,17 +69,6 @@ _data = {
 }
 point_count = 8
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_tq2wc"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tq2wc"]
-albedo_texture = ExtResource("39_us3vy")
-metallic = 1.0
-metallic_specular = 0.0
-metallic_texture = ExtResource("22_kse5y")
-
-[sub_resource type="BoxMesh" id="BoxMesh_h5klq"]
-material = SubResource("StandardMaterial3D_tq2wc")
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lkn2m"]
 albedo_color = Color(0, 0.39215687, 0, 1)
 metallic = 0.67
@@ -123,6 +112,23 @@ roughness = 0.35
 material = SubResource("StandardMaterial3D_lc6he")
 top_radius = 0.3
 bottom_radius = 0.3
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bi7ml"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bi7ml"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ifg2"]
+albedo_texture = ExtResource("39_us3vy")
+metallic = 1.0
+metallic_specular = 0.0
+metallic_texture = ExtResource("22_kse5y")
+
+[sub_resource type="BoxMesh" id="BoxMesh_uq62c"]
+material = SubResource("StandardMaterial3D_3ifg2")
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lc6he"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_uq62c"]
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_kflxq")
@@ -183,16 +189,6 @@ shape = SubResource("BoxShape3D_76ecl")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.509)
 texture = ExtResource("30_bjmox")
 
-[node name="Pide" type="Area3D" parent="."]
-script = ExtResource("33_abthc")
-
-[node name="Sprite3D" type="Sprite3D" parent="Pide"]
-texture = ExtResource("34_bjmox")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Pide"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0010544658, 0)
-shape = SubResource("SphereShape3D_myktr")
-
 [node name="Pide2" type="Area3D" parent="."]
 script = ExtResource("33_abthc")
 
@@ -200,6 +196,16 @@ script = ExtResource("33_abthc")
 texture = ExtResource("34_bjmox")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Pide2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0010544658, 0)
+shape = SubResource("SphereShape3D_myktr")
+
+[node name="Pide" type="Area3D" parent="."]
+script = ExtResource("33_abthc")
+
+[node name="Sprite3D" type="Sprite3D" parent="Pide"]
+texture = ExtResource("34_bjmox")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pide"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0010544658, 0)
 shape = SubResource("SphereShape3D_myktr")
 
@@ -333,46 +339,6 @@ shape = SubResource("SphereShape3D_us3vy")
 [node name="Sprite3D" type="Sprite3D" parent="Path3D2/PathFollow3D/DikenDuvar"]
 texture = ExtResource("39_bcol2")
 
-[node name="Kutu1" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
-mass = 0.001
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Kutu1"]
-shape = SubResource("BoxShape3D_tq2wc")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Kutu1"]
-mesh = SubResource("BoxMesh_h5klq")
-
-[node name="Kutu2" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
-mass = 0.001
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Kutu2"]
-shape = SubResource("BoxShape3D_tq2wc")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Kutu2"]
-mesh = SubResource("BoxMesh_h5klq")
-
-[node name="Kutu3" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.419795, 0, -2)
-mass = 0.001
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Kutu3"]
-shape = SubResource("BoxShape3D_tq2wc")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Kutu3"]
-mesh = SubResource("BoxMesh_h5klq")
-
-[node name="Kutu4" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
-mass = 0.001
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Kutu4"]
-shape = SubResource("BoxShape3D_tq2wc")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Kutu4"]
-mesh = SubResource("BoxMesh_h5klq")
-
 [node name="TankVücüt" type="CharacterBody3D" parent="." groups=["sınır", "tank"]]
 transform = Transform3D(0.09255992, 0, 0.79462737, 0, 0.8, 0, -0.79462737, 0, 0.09255992, 0, 0, 0)
 
@@ -436,10 +402,50 @@ process_callback = 0
 wait_time = 0.7
 autostart = true
 
+[node name="Kutu1" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.4655952)
+mass = 0.001
+physics_material_override = SubResource("PhysicsMaterial_bi7ml")
+
+[node name="KutuŞekil" type="CollisionShape3D" parent="Kutu1"]
+shape = SubResource("BoxShape3D_bi7ml")
+
+[node name="KutuDış" type="MeshInstance3D" parent="Kutu1"]
+mesh = SubResource("BoxMesh_uq62c")
+
+[node name="Kutu2" type="RigidBody3D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_lc6he")
+
+[node name="KutuŞekil" type="CollisionShape3D" parent="Kutu2"]
+shape = SubResource("BoxShape3D_bi7ml")
+
+[node name="KutuDış" type="MeshInstance3D" parent="Kutu2"]
+mesh = SubResource("BoxMesh_uq62c")
+
+[node name="Kutu3" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.035, 0)
+physics_material_override = SubResource("PhysicsMaterial_uq62c")
+
+[node name="KutuŞekil" type="CollisionShape3D" parent="Kutu3"]
+shape = SubResource("BoxShape3D_bi7ml")
+
+[node name="KutuDış" type="MeshInstance3D" parent="Kutu3"]
+mesh = SubResource("BoxMesh_uq62c")
+
+[node name="Kutu4" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07, 0)
+physics_material_override = SubResource("PhysicsMaterial_uq62c")
+
+[node name="KutuŞekil" type="CollisionShape3D" parent="Kutu4"]
+shape = SubResource("BoxShape3D_bi7ml")
+
+[node name="KutuDış" type="MeshInstance3D" parent="Kutu4"]
+mesh = SubResource("BoxMesh_uq62c")
+
 [connection signal="area_entered" from="Yenküp/Area3D" to="Yenküp" method="_on_area_3d_area_entered"]
 [connection signal="area_entered" from="GizliYerküp/Area3D" to="GizliYerküp" method="_on_area_3d_area_entered"]
-[connection signal="body_entered" from="Pide" to="Pide" method="_on_body_entered"]
 [connection signal="body_entered" from="Pide2" to="Pide2" method="_on_body_entered"]
+[connection signal="body_entered" from="Pide" to="Pide" method="_on_body_entered"]
 [connection signal="body_entered" from="Pide3" to="Pide3" method="_on_body_entered"]
 [connection signal="body_entered" from="Simit" to="Simit" method="_on_body_entered"]
 [connection signal="body_entered" from="Poğaça" to="Poğaça" method="_on_body_entered"]

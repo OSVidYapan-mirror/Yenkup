@@ -15,18 +15,18 @@ func _ready():
 	$C42.position=Vector3(randi_range(-55,55), (-0.99), randi_range(-55,55))
 	$C43.position=Vector3(randi_range(-55,55), (-0.99), randi_range(-55,55))
 	$C44.position=Vector3(randi_range(-55,55), (-0.99), randi_range(-55,55))
-	$C45.position=Vector3(randi_range(-55,55), (-0.99), randi_range(-55,55))
 	$GizliYerküp.position=Vector3(randi_range(-55,55), (0), randi_range(-55,55))
-	$Kutu1.position=Vector3(randi_range(-55,55), (-0.99), randi_range(-55,55))
-	$Kutu2.position=Vector3(randi_range(-55,55), (-0.99), randi_range(-55,55))
-	$Kutu3.position=Vector3(randi_range(-55,55), (-0.99), randi_range(-55,55))
+	$Kutu1.position=Vector3(randi_range(-55,55), (0), randf_range(-55,55))
+	$Kutu2.position=Vector3(randi_range(-55,55), (0), randf_range(-55,55))
+	$Kutu3.position=Vector3(randi_range(-55,55), (0.035), randi_range(-55,55))
 	$Yüzey/Ağaç1.position=Vector3(randf_range(-0.5,0.5), (0.05), randf_range(-0.5,0.5))
 	$Yüzey/Ağaç2.position=Vector3(randf_range(-0.5,0.5), (0.05), randf_range(-0.5,0.5))
 	$Yüzey/Ağaç3.position=Vector3(randf_range(-0.5,0.5), (0.05), randf_range(-0.5,0.5))
 	$Yüzey/Ağaç4.position=Vector3(randf_range(-0.5,0.5), (0.05), randf_range(-0.5,0.5))
 	$Yüzey/Ağaç5.position=Vector3(randf_range(-0.5,0.5), (0.05), randf_range(-0.5,0.5))
 #Kolay Mod???
-	if not $C46 == null:
+	if not $C45 == null:
+		$C45.position=Vector3(randi_range(-49,49), (-0.99), randi_range(-49,49))
 		$C46.position=Vector3(randi_range(-49,49), (-0.99), randi_range(-49,49))
 		$C47.position=Vector3(randi_range(-49,49), (-0.99), randi_range(-49,49))
 		$Kutu4.position=Vector3(randi_range(-49,49), (-0.99), randi_range(-49,49))

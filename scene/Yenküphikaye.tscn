@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://cx6gn86r3r10h"]
+[gd_scene load_steps=63 format=3 uid="uid://cx6gn86r3r10h"]
 
 [ext_resource type="Script" uid="uid://bhkevcuvty4ay" path="res://src/mainscene/main.gd" id="1_kflxq"]
 [ext_resource type="PackedScene" uid="uid://bn6bqmhm3c7g5" path="res://scene/Birleşik.tscn" id="2_wwwsa"]
@@ -94,6 +94,23 @@ albedo_texture = ExtResource("35_oftdb")
 [sub_resource type="BoxMesh" id="BoxMesh_fciaq"]
 material = SubResource("StandardMaterial3D_8omi5")
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_wwwsa"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fn42i"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ifg2"]
+albedo_texture = ExtResource("16_a5ri5")
+metallic = 1.0
+metallic_specular = 0.0
+metallic_texture = ExtResource("22_kse5y")
+
+[sub_resource type="BoxMesh" id="BoxMesh_poats"]
+material = SubResource("StandardMaterial3D_3ifg2")
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7a5fl"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qjf5k"]
+
 [sub_resource type="Curve3D" id="Curve3D_bcol2"]
 closed = true
 _data = {
@@ -113,17 +130,6 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 8
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_tq2wc"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tq2wc"]
-albedo_texture = ExtResource("16_a5ri5")
-metallic = 1.0
-metallic_specular = 0.0
-metallic_texture = ExtResource("22_kse5y")
-
-[sub_resource type="BoxMesh" id="BoxMesh_h5klq"]
-material = SubResource("StandardMaterial3D_tq2wc")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a5ri5"]
 albedo_color = Color(0, 0.39215687, 0, 1)
@@ -391,6 +397,47 @@ shape = SubResource("BoxShape3D_c67pv")
 mesh = SubResource("BoxMesh_fciaq")
 skeleton = NodePath("../../C45")
 
+[node name="Kutu1" type="RigidBody3D" parent="."]
+transform = Transform3D(0.115699895, 0, 0.9932842, 0, 1, 0, -0.9932842, 0, 0.115699895, 1.164602, 0, 0.13565537)
+mass = 0.001
+physics_material_override = SubResource("PhysicsMaterial_wwwsa")
+
+[node name="KutuŞekil" type="CollisionShape3D" parent="Kutu1"]
+shape = SubResource("BoxShape3D_fn42i")
+
+[node name="KutuDış" type="MeshInstance3D" parent="Kutu1"]
+mesh = SubResource("BoxMesh_poats")
+
+[node name="Kutu2" type="RigidBody3D" parent="."]
+transform = Transform3D(0.115699895, 0, 0.9932842, 0, 1, 0, -0.9932842, 0, 0.115699895, 0, 0, 0)
+physics_material_override = SubResource("PhysicsMaterial_7a5fl")
+
+[node name="KutuŞekil" type="CollisionShape3D" parent="Kutu2"]
+shape = SubResource("BoxShape3D_fn42i")
+
+[node name="KutuDış" type="MeshInstance3D" parent="Kutu2"]
+mesh = SubResource("BoxMesh_poats")
+
+[node name="Kutu3" type="RigidBody3D" parent="."]
+transform = Transform3D(0.115699895, 0, 0.9932842, 0, 1, 0, -0.9932842, 0, 0.115699895, 0, 0.028, 0)
+physics_material_override = SubResource("PhysicsMaterial_qjf5k")
+
+[node name="KutuŞekil" type="CollisionShape3D" parent="Kutu3"]
+shape = SubResource("BoxShape3D_fn42i")
+
+[node name="KutuDış" type="MeshInstance3D" parent="Kutu3"]
+mesh = SubResource("BoxMesh_poats")
+
+[node name="Kutu4" type="RigidBody3D" parent="."]
+transform = Transform3D(0.115699895, 0, 0.9932842, 0, 1, 0, -0.9932842, 0, 0.115699895, 0, 0.056, 0)
+physics_material_override = SubResource("PhysicsMaterial_qjf5k")
+
+[node name="KutuŞekil" type="CollisionShape3D" parent="Kutu4"]
+shape = SubResource("BoxShape3D_fn42i")
+
+[node name="KutuDış" type="MeshInstance3D" parent="Kutu4"]
+mesh = SubResource("BoxMesh_poats")
+
 [node name="Path3D" type="Path3D" parent="."]
 curve = SubResource("Curve3D_bcol2")
 debug_custom_color = Color(1, 0, 0, 1)
@@ -423,53 +470,6 @@ shape = SubResource("SphereShape3D_us3vy")
 
 [node name="Sprite3D" type="Sprite3D" parent="Path3D2/PathFollow3D/DikenDuvar"]
 texture = ExtResource("39_bcol2")
-
-[node name="Kutu1" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
-mass = 0.001
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Kutu1"]
-shape = SubResource("BoxShape3D_tq2wc")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Kutu1"]
-mesh = SubResource("BoxMesh_h5klq")
-
-[node name="Kutu2" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
-mass = 0.001
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Kutu2"]
-shape = SubResource("BoxShape3D_tq2wc")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Kutu2"]
-mesh = SubResource("BoxMesh_h5klq")
-
-[node name="Kutu3" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
-mass = 0.001
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Kutu3"]
-shape = SubResource("BoxShape3D_tq2wc")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Kutu3"]
-mesh = SubResource("BoxMesh_h5klq")
-
-[node name="Kutu4" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
-mass = 0.001
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Kutu4"]
-shape = SubResource("BoxShape3D_tq2wc")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Kutu4"]
-mesh = SubResource("BoxMesh_h5klq")
-
-[node name="Timer" type="Timer" parent="."]
-process_mode = 3
-physics_interpolation_mode = 1
-process_callback = 0
-wait_time = 0.7
-autostart = true
 
 [node name="TankVücüt" type="CharacterBody3D" parent="." groups=["sınır", "tank"]]
 transform = Transform3D(0.09255992, 0, 0.79462737, 0, 0.8, 0, -0.79462737, 0, 0.09255992, 0, 0, 0)
@@ -526,6 +526,13 @@ skeleton = NodePath("../../../..")
 
 [node name="TankSes" type="AudioStreamPlayer3D" parent="TankVücüt/TankKafa"]
 stream = ExtResource("19_wwwsa")
+
+[node name="Timer" type="Timer" parent="."]
+process_mode = 3
+physics_interpolation_mode = 1
+process_callback = 0
+wait_time = 0.7
+autostart = true
 
 [connection signal="area_entered" from="Yenküp/Area3D" to="Yenküp" method="_on_area_3d_area_entered"]
 [connection signal="area_entered" from="GizliYerküp/Area3D" to="GizliYerküp" method="_on_area_3d_area_entered"]

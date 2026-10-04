@@ -20,18 +20,18 @@ func _on_orjinal_released():
 func _on_öğretici_düğme_released():
 	$"ÖğreticiDüğme/ÖğretenPencere".show()
 func _on_en_düğme_released():
-	$"ÖğreticiDüğme/ÖğretenPencere/ColorRect/Label/ENDüğme/ENTutorial".show()
-	$"ÖğreticiDüğme/ÖğretenPencere/ColorRect/Label/ENDüğme/ENTutorial".play()
+	$"ÖğreticiDüğme/ÖğretenPencere/Arkaplan/Dilseç/ENDüğme/ENTutorial".show()
+	$"ÖğreticiDüğme/ÖğretenPencere/Arkaplan/Dilseç/ENDüğme/ENTutorial".play()
 func _on_tr_düğme_released():
-	$"ÖğreticiDüğme/ÖğretenPencere/ColorRect/Label/TRDüğme/TRtutorial".show()
-	$"ÖğreticiDüğme/ÖğretenPencere/ColorRect/Label/TRDüğme/TRtutorial".play()
+	$"ÖğreticiDüğme/ÖğretenPencere/Arkaplan/Dilseç/TRDüğme/TRtutorial".show()
+	$"ÖğreticiDüğme/ÖğretenPencere/Arkaplan/Dilseç/TRDüğme/TRtutorial".play()
 
 func _on_öğreten_pencere_close_requested():
 	$"ÖğreticiDüğme/ÖğretenPencere".hide()
-	$"ÖğreticiDüğme/ÖğretenPencere/ColorRect/Label/ENDüğme/ENTutorial".stop()
-	$"ÖğreticiDüğme/ÖğretenPencere/ColorRect/Label/ENDüğme/ENTutorial".hide()
-	$"ÖğreticiDüğme/ÖğretenPencere/ColorRect/Label/TRDüğme/TRtutorial".stop()
-	$"ÖğreticiDüğme/ÖğretenPencere/ColorRect/Label/TRDüğme/TRtutorial".hide()
+	$"ÖğreticiDüğme/ÖğretenPencere/Arkaplan/Dilseç/ENDüğme/ENTutorial".stop()
+	$"ÖğreticiDüğme/ÖğretenPencere/Arkaplan/Dilseç/ENDüğme/ENTutorial".hide()
+	$"ÖğreticiDüğme/ÖğretenPencere/Arkaplan/Dilseç/TRDüğme/TRtutorial".stop()
+	$"ÖğreticiDüğme/ÖğretenPencere/Arkaplan/Dilseç/TRDüğme/TRtutorial".hide()
 #Hikaye
 func _on_hikaye_düğme_released():
 	$"HikayeDüğme/HikayePencere".show()
@@ -87,7 +87,6 @@ func _on_bulutlu_released() -> void:
 func _on_karanlık_released() -> void:
 	conf.set_value("Gökyüzü","Renk", Color(0.2,0.2,0.2))
 	conf.save("user://Yenküp.conf")
-
 #Atıf
 func _on_atıf_düğme_released():
 	$AtıfDüğme/AtıfPencere.show()

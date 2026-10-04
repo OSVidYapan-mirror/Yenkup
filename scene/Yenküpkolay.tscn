@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cl7g2oerxqxog"]
+[gd_scene load_steps=35 format=3 uid="uid://cl7g2oerxqxog"]
 
 [ext_resource type="Script" uid="uid://bhkevcuvty4ay" path="res://src/mainscene/main.gd" id="1_7cjc0"]
 [ext_resource type="PackedScene" uid="uid://bn6bqmhm3c7g5" path="res://scene/Birleşik.tscn" id="2_3ifg2"]
@@ -58,16 +58,22 @@ point_count = 4
 [sub_resource type="SphereShape3D" id="SphereShape3D_us3vy"]
 radius = 0.3411178
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_tq2wc"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5ajjl"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tq2wc"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_3ifg2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7n7t2"]
 albedo_texture = ExtResource("39_us3vy")
 metallic = 1.0
 metallic_specular = 0.0
 metallic_texture = ExtResource("22_kse5y")
 
-[sub_resource type="BoxMesh" id="BoxMesh_h5klq"]
-material = SubResource("StandardMaterial3D_tq2wc")
+[sub_resource type="BoxMesh" id="BoxMesh_k3ba6"]
+material = SubResource("StandardMaterial3D_7n7t2")
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_cur5j"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_pgqca"]
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_7cjc0")
@@ -236,16 +242,6 @@ shape = SubResource("BoxShape3D_c67pv")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="C44"]
 mesh = SubResource("BoxMesh_fciaq")
 
-[node name="C45" type="Area3D" parent="." groups=["c4", "düşman"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.99, -2)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="C45"]
-shape = SubResource("BoxShape3D_c67pv")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="C45"]
-mesh = SubResource("BoxMesh_fciaq")
-skeleton = NodePath("../../C45")
-
 [node name="Path3D" type="Path3D" parent="."]
 curve = SubResource("Curve3D_bcol2")
 debug_custom_color = Color(1, 0, 0, 1)
@@ -263,34 +259,34 @@ shape = SubResource("SphereShape3D_us3vy")
 texture = ExtResource("39_bcol2")
 
 [node name="Kutu1" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.4655952)
 mass = 0.001
+physics_material_override = SubResource("PhysicsMaterial_5ajjl")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Kutu1"]
-shape = SubResource("BoxShape3D_tq2wc")
+[node name="KutuŞekil" type="CollisionShape3D" parent="Kutu1"]
+shape = SubResource("BoxShape3D_3ifg2")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Kutu1"]
-mesh = SubResource("BoxMesh_h5klq")
+[node name="KutuDış" type="MeshInstance3D" parent="Kutu1"]
+mesh = SubResource("BoxMesh_k3ba6")
 
 [node name="Kutu2" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
-mass = 0.001
+physics_material_override = SubResource("PhysicsMaterial_cur5j")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Kutu2"]
-shape = SubResource("BoxShape3D_tq2wc")
+[node name="KutuŞekil" type="CollisionShape3D" parent="Kutu2"]
+shape = SubResource("BoxShape3D_3ifg2")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Kutu2"]
-mesh = SubResource("BoxMesh_h5klq")
+[node name="KutuDış" type="MeshInstance3D" parent="Kutu2"]
+mesh = SubResource("BoxMesh_k3ba6")
 
 [node name="Kutu3" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
-mass = 0.001
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.035, 0)
+physics_material_override = SubResource("PhysicsMaterial_pgqca")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Kutu3"]
-shape = SubResource("BoxShape3D_tq2wc")
+[node name="KutuŞekil" type="CollisionShape3D" parent="Kutu3"]
+shape = SubResource("BoxShape3D_3ifg2")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Kutu3"]
-mesh = SubResource("BoxMesh_h5klq")
+[node name="KutuDış" type="MeshInstance3D" parent="Kutu3"]
+mesh = SubResource("BoxMesh_k3ba6")
 
 [connection signal="area_entered" from="Yenküp/Area3D" to="Yenküp" method="_on_area_3d_area_entered"]
 [connection signal="area_entered" from="GizliYerküp/Area3D" to="GizliYerküp" method="_on_area_3d_area_entered"]
@@ -305,4 +301,3 @@ mesh = SubResource("BoxMesh_h5klq")
 [connection signal="body_entered" from="C42" to="C42" method="_on_body_entered"]
 [connection signal="body_entered" from="C43" to="C43" method="_on_body_entered"]
 [connection signal="body_entered" from="C44" to="C44" method="_on_body_entered"]
-[connection signal="body_entered" from="C45" to="C45" method="_on_body_entered"]
